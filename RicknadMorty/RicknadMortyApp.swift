@@ -11,7 +11,11 @@ import SwiftUI
 struct RicknadMortyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(
+                coordinator: AppCoordinator(
+                    container: AppDependencyContainer()
+                )
+            )
         }
     }
 }
