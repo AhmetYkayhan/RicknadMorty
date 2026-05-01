@@ -1,4 +1,5 @@
 import Foundation
+import FirebaseAuth
 
 // MARK: - App Dependency Container
 
@@ -16,7 +17,7 @@ final class AppDependencyContainer {
     // MARK: - Auth Feature
 
     func makeAuthFeature(delegate: AuthFeatureDelegate?) -> AuthFeatureInterface {
-        let service: AuthServiceProtocol = AuthService(networkClient: networkClient)
+        let service: AuthServiceProtocol = FirebaseAuthService()
         let repository: AuthRepositoryProtocol = AuthRepository(service: service, logger: logger)
         let loginUseCase: LoginUseCaseProtocol = LoginUseCase(
             repository: repository,
@@ -46,6 +47,6 @@ final class AppDependencyContainer {
     // MARK: - Helpers
 
     var isAuthenticated: Bool {
-        tokenStorage.hasToken
+        Auth.auth().currentUser != nil
     }
 }

@@ -9,15 +9,6 @@ struct HomeView: View {
         NavigationStack {
             content
                 .navigationTitle("Characters")
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            viewModel.settingsTapped()
-                        } label: {
-                            Image(systemName: "gearshape")
-                        }
-                    }
-                }
                 .refreshable {
                     viewModel.refresh()
                 }
@@ -45,13 +36,12 @@ struct HomeView: View {
     private var characterList: some View {
         List {
             ForEach(viewModel.state.characters) { character in
-                CharacterRowView(character: character)
-                    .onTapGesture {
-                        viewModel.characterTapped(character)
-                    }
-                    .onAppear {
-                        viewModel.loadMoreIfNeeded(currentItem: character)
-                    }
+                NavigationLink(value: character) {
+                    CharacterRowView(character: character)
+                }
+                .onAppear {
+                    viewModel.loadMoreIfNeeded(currentItem: character)
+                }
             }
 
             if viewModel.state.isLoading {
@@ -64,6 +54,9 @@ struct HomeView: View {
             }
         }
         .listStyle(.plain)
+        .navigationDestination(for: HomeEntity.self) { character in
+            CharacterDetailView(character: character)
+        }
     }
 }
 

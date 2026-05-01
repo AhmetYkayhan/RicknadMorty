@@ -19,5 +19,13 @@ struct CharacterDTO: Decodable {
     let name: String
     let status: String
     let species: String
+    let gender: String
+    let origin: LocationDTO
+    let location: LocationDTO
     let image: String
+}
+
+struct LocationDTO: Decodable {
+    let name: String
+    let url: String
 }

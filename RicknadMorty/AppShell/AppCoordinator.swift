@@ -1,5 +1,6 @@
 import SwiftUI
 import Observation
+import FirebaseAuth
 
 // MARK: - App Coordinator
 
@@ -39,6 +40,17 @@ final class AppCoordinator {
         }
     }
 
+    // MARK: - Logout
+
+    func logout() {
+        try? Auth.auth().signOut()
+        _authFeature = nil
+        _homeFeature = nil
+        withAnimation {
+            currentRoute = .login
+        }
+    }
+
     // MARK: - View Factory
 
     @ViewBuilder
@@ -48,24 +60,12 @@ final class AppCoordinator {
             authFeature.makeLoginView()
                 .transition(.move(edge: .trailing))
 
-        case .home:
-            homeFeature.makeHomeView()
-                .transition(.move(edge: .trailing))
-
-        case .characterDetail(let id):
-            // Placeholder — would be a CharacterDetailFeature
-            Text("Character Detail: \(id)")
-                .font(.title)
-
-        case .settings:
-            // Placeholder — would be SettingsFeature
-            Text("Settings")
-                .font(.title)
-
-        case .profile:
-            // Placeholder — would be ProfileFeature
-            Text("Profile")
-                .font(.title)
+        case .home, .characterDetail, .settings, .profile:
+            MainTabView(
+                homeView: homeFeature.makeHomeView(),
+                onLogout: { [weak self] in self?.logout() }
+            )
+            .transition(.move(edge: .trailing))
         }
     }
 }

@@ -9,6 +9,9 @@ enum HomeMapper {
             name: dto.name,
             status: HomeEntity.Status(rawValue: dto.status) ?? .unknown,
             species: dto.species,
+            gender: dto.gender,
+            origin: dto.origin.name,
+            location: dto.location.name,
             imageURL: URL(string: dto.image)
         )
     }
