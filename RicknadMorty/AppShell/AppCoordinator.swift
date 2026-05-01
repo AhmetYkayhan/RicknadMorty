@@ -14,6 +14,7 @@ final class AppCoordinator {
     private let container: AppDependencyContainer
     private var _authFeature: AuthFeatureInterface?
     private var _homeFeature: HomeFeatureInterface?
+    private var _searchViewModel: SearchViewModel?
 
     @ObservationIgnored
     private var authFeature: AuthFeatureInterface {
@@ -31,6 +32,14 @@ final class AppCoordinator {
         return feature
     }
 
+    @ObservationIgnored
+    private var searchViewModel: SearchViewModel {
+        if let existing = _searchViewModel { return existing }
+        let viewModel = container.makeSearchViewModel()
+        _searchViewModel = viewModel
+        return viewModel
+    }
+
     init(container: AppDependencyContainer) {
         self.container = container
 
@@ -46,6 +55,7 @@ final class AppCoordinator {
         try? Auth.auth().signOut()
         _authFeature = nil
         _homeFeature = nil
+        _searchViewModel = nil
         withAnimation {
             currentRoute = .login
         }
@@ -63,6 +73,8 @@ final class AppCoordinator {
         case .home, .characterDetail, .settings, .profile:
             MainTabView(
                 homeView: homeFeature.makeHomeView(),
+                favoritesStore: container.favoritesStore,
+                searchViewModel: searchViewModel,
                 onLogout: { [weak self] in self?.logout() }
             )
             .transition(.move(edge: .trailing))

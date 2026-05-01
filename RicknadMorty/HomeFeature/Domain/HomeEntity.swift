@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Home Entity (Domain layer)
 
-struct HomeEntity: Equatable, Hashable, Identifiable {
+struct HomeEntity: Codable, Equatable, Hashable, Identifiable {
     let id: Int
     let name: String
     let status: Status
@@ -12,7 +12,7 @@ struct HomeEntity: Equatable, Hashable, Identifiable {
     let location: String
     let imageURL: URL?
 
-    enum Status: String, Equatable {
+    enum Status: String, Codable, Equatable {
         case alive = "Alive"
         case dead = "Dead"
         case unknown = "unknown"

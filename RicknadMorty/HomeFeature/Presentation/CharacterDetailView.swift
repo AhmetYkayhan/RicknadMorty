@@ -5,6 +5,8 @@ import SwiftUI
 struct CharacterDetailView: View {
     let character: HomeEntity
 
+    @Environment(\.favoritesStore) private var favoritesStore
+
     var body: some View {
         ScrollView {
             VStack(spacing: AppSpacing.md) {
@@ -34,6 +36,18 @@ struct CharacterDetailView: View {
         }
         .navigationTitle(character.name)
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            if let store = favoritesStore {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        store.toggle(character)
+                    } label: {
+                        Image(systemName: store.isFavorite(character.id) ? "heart.fill" : "heart")
+                            .foregroundColor(store.isFavorite(character.id) ? .red : AppColors.secondaryLabel)
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Info Row

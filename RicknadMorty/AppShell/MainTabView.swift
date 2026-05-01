@@ -4,6 +4,8 @@ import SwiftUI
 
 struct MainTabView: View {
     let homeView: AnyView
+    let favoritesStore: FavoritesStore
+    let searchViewModel: SearchViewModel
     var onLogout: (() -> Void)?
 
     var body: some View {
@@ -18,10 +20,14 @@ struct MainTabView: View {
                     Label("Profile", systemImage: "person")
                 }
 
-            SettingsView(onLogout: onLogout)
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
+            SettingsView(
+                viewModel: searchViewModel,
+                onLogout: onLogout
+            )
+            .tabItem {
+                Label("Settings", systemImage: "gearshape")
+            }
         }
+        .environment(\.favoritesStore, favoritesStore)
     }
 }

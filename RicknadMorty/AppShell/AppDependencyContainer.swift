@@ -14,6 +14,10 @@ final class AppDependencyContainer {
     private lazy var tokenStorage: TokenStorageProtocol = KeychainTokenStorage()
     private lazy var networkClient: NetworkClientProtocol = NetworkClient(logger: logger)
 
+    // MARK: - Shared Stores
+
+    lazy var favoritesStore: FavoritesStore = FavoritesStore()
+
     // MARK: - Auth Feature
 
     func makeAuthFeature(delegate: AuthFeatureDelegate?) -> AuthFeatureInterface {
@@ -42,6 +46,15 @@ final class AppDependencyContainer {
             getHomeUseCase: useCase,
             delegate: delegate
         )
+    }
+
+    // MARK: - Search (Settings)
+
+    func makeSearchViewModel() -> SearchViewModel {
+        let service: SearchServiceProtocol = SearchService(networkClient: networkClient)
+        let repository: SearchRepositoryProtocol = SearchRepository(service: service, logger: logger)
+        let useCase: SearchUseCaseProtocol = SearchUseCase(repository: repository)
+        return SearchViewModel(useCase: useCase)
     }
 
     // MARK: - Helpers
