@@ -1,6 +1,7 @@
 import Foundation
 import AppCore
 import AppNetwork
+import HomeFeature
 
 // MARK: - Search Service Protocol
 

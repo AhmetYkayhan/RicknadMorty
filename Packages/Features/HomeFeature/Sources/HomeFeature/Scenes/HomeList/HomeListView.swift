@@ -1,34 +1,26 @@
 import SwiftUI
-import AppLogger
 import DesignSystem
 
-// MARK: - Home View
-
-struct HomeView: View {
-    var viewModel: HomeViewModel
+struct HomeListView: View {
+    let interactor: HomeListInteractor
+    @Bindable var presenter: HomeListPresenter
 
     var body: some View {
         NavigationStack {
             content
                 .navigationTitle("Characters")
-                .refreshable {
-                    viewModel.refresh()
-                }
+                .refreshable { interactor.handle(.refresh) }
         }
-        .onAppear {
-            viewModel.onAppear()
-        }
+        .onAppear { interactor.handle(.onAppear) }
     }
-
-    // MARK: - Content
 
     @ViewBuilder
     private var content: some View {
-        if let error = viewModel.state.errorMessage, viewModel.state.characters.isEmpty {
-            ErrorView(message: error) {
-                viewModel.refresh()
-            }
-        } else if viewModel.state.isLoading && viewModel.state.characters.isEmpty {
+        if let error = presenter.viewState.errorMessage,
+           presenter.viewState.characters.isEmpty {
+            ErrorView(message: error) { interactor.handle(.refresh) }
+        } else if presenter.viewState.isLoading,
+                  presenter.viewState.characters.isEmpty {
             LoadingView(message: "Loading characters...")
         } else {
             characterList
@@ -37,32 +29,26 @@ struct HomeView: View {
 
     private var characterList: some View {
         List {
-            ForEach(viewModel.state.characters) { character in
+            ForEach(presenter.viewState.characters) { character in
                 NavigationLink(value: character) {
                     CharacterRowView(character: character)
                 }
                 .onAppear {
-                    viewModel.loadMoreIfNeeded(currentItem: character)
+                    interactor.handle(.loadMoreIfNeeded(currentItemId: character.id))
                 }
             }
 
-            if viewModel.state.isLoading {
-                HStack {
-                    Spacer()
-                    ProgressView()
-                    Spacer()
-                }
-                .listRowSeparator(.hidden)
+            if presenter.viewState.isLoading {
+                HStack { Spacer(); ProgressView(); Spacer() }
+                    .listRowSeparator(.hidden)
             }
         }
         .listStyle(.plain)
         .navigationDestination(for: HomeEntity.self) { character in
-            CharacterDetailView(character: character)
+            CharacterDetailSceneFactory.make(character: character)
         }
     }
 }
-
-// MARK: - Character Row View
 
 struct CharacterRowView: View {
     let character: HomeEntity
@@ -70,9 +56,7 @@ struct CharacterRowView: View {
     var body: some View {
         HStack(spacing: AppSpacing.sm) {
             AsyncImage(url: character.imageURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                image.resizable().aspectRatio(contentMode: .fill)
             } placeholder: {
                 Color.gray.opacity(0.3)
             }
@@ -80,14 +64,9 @@ struct CharacterRowView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
 
             VStack(alignment: .leading, spacing: AppSpacing.xxs) {
-                Text(character.name)
-                    .font(AppTypography.headline)
-
+                Text(character.name).font(AppTypography.headline)
                 HStack(spacing: AppSpacing.xxs) {
-                    Circle()
-                        .fill(statusColor)
-                        .frame(width: 8, height: 8)
-
+                    Circle().fill(statusColor).frame(width: 8, height: 8)
                     Text("\(character.status.rawValue) - \(character.species)")
                         .font(AppTypography.caption)
                         .foregroundColor(AppColors.secondaryLabel)
@@ -95,7 +74,6 @@ struct CharacterRowView: View {
             }
 
             Spacer()
-
             Image(systemName: "chevron.right")
                 .foregroundColor(AppColors.secondaryLabel)
         }
@@ -109,19 +87,4 @@ struct CharacterRowView: View {
         case .unknown: return AppColors.warning
         }
     }
-}
-
-#Preview {
-    let mockService = MockHomeService()
-    let repository = HomeRepository(
-        service: mockService,
-        logger: AppLogger(category: "home-preview")
-    )
-    let useCase = GetHomeUseCase(repository: repository)
-    let viewModel = HomeViewModel(
-        getHomeUseCase: useCase,
-        delegate: nil
-    )
-
-    HomeView(viewModel: viewModel)
 }

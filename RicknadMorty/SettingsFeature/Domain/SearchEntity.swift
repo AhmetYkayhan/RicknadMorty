@@ -1,4 +1,5 @@
 import Foundation
+import HomeFeature
 
 // MARK: - Search Type
 

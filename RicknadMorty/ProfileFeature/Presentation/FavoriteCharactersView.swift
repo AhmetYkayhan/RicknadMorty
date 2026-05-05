@@ -1,5 +1,6 @@
 import SwiftUI
 import DesignSystem
+import HomeFeature
 
 // MARK: - Favorite Characters View
 
@@ -18,7 +19,7 @@ struct FavoriteCharactersView: View {
                 }
                 .listStyle(.plain)
                 .navigationDestination(for: HomeEntity.self) { character in
-                    CharacterDetailView(character: character)
+                    CharacterDetailSceneFactory.make(character: character)
                 }
             } else {
                 ContentUnavailableView(

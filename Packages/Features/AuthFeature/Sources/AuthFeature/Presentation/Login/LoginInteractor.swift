@@ -3,18 +3,21 @@ import AuthFeatureInterface
 
 // MARK: - Login Interactor Protocol
 
+@MainActor
 public protocol LoginInteractorProtocol: AnyObject {
     func handle(_ request: Login.Request)
 }
 
 // MARK: - Login Interactor Output (Interactor -> Presenter)
 
+@MainActor
 protocol LoginInteractorOutput: AnyObject {
     func present(_ response: Login.Response)
 }
 
 // MARK: - Login Router Delegate
 
+@MainActor
 protocol LoginRouterDelegate: AnyObject {
     func loginDidComplete(route: AuthRoute)
 }

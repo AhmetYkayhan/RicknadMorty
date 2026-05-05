@@ -8,7 +8,7 @@ private struct FavoritesStoreKey: EnvironmentKey {
     static let defaultValue: FavoritesStore? = nil
 }
 
-extension EnvironmentValues {
+public extension EnvironmentValues {
     var favoritesStore: FavoritesStore? {
         get { self[FavoritesStoreKey.self] }
         set { self[FavoritesStoreKey.self] = newValue }
@@ -19,20 +19,20 @@ extension EnvironmentValues {
 
 @MainActor
 @Observable
-final class FavoritesStore {
+public final class FavoritesStore {
     private static let key = "favorite_characters"
 
-    private(set) var favorites: [HomeEntity] = []
+    public private(set) var favorites: [HomeEntity] = []
 
-    init() {
+    public init() {
         load()
     }
 
-    func isFavorite(_ id: Int) -> Bool {
+    public func isFavorite(_ id: Int) -> Bool {
         favorites.contains { $0.id == id }
     }
 
-    func toggle(_ character: HomeEntity) {
+    public func toggle(_ character: HomeEntity) {
         if let index = favorites.firstIndex(where: { $0.id == character.id }) {
             favorites.remove(at: index)
         } else {

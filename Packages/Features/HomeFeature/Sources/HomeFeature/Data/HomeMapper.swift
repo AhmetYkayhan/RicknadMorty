@@ -2,8 +2,8 @@ import Foundation
 
 // MARK: - Home Mapper (DTO -> Entity)
 
-enum HomeMapper {
-    static func map(_ dto: CharacterDTO) -> HomeEntity {
+public enum HomeMapper {
+    public static func map(_ dto: CharacterDTO) -> HomeEntity {
         HomeEntity(
             id: dto.id,
             name: dto.name,
@@ -16,7 +16,7 @@ enum HomeMapper {
         )
     }
 
-    static func map(_ dtos: [CharacterDTO]) -> [HomeEntity] {
+    public static func map(_ dtos: [CharacterDTO]) -> [HomeEntity] {
         dtos.map { map($0) }
     }
 }

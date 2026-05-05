@@ -1,5 +1,6 @@
 import SwiftUI
 import DesignSystem
+import HomeFeature
 
 // MARK: - Profile View
 

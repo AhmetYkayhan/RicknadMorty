@@ -1,5 +1,6 @@
 import SwiftUI
 import DesignSystem
+import HomeFeature
 
 // MARK: - Search Results View
 
@@ -54,7 +55,7 @@ struct SearchResultsView: View {
     @ViewBuilder
     private func destinationView(for result: SearchResultEntity) -> some View {
         switch result {
-        case .character(let entity): CharacterDetailView(character: entity)
+        case .character(let entity): CharacterDetailSceneFactory.make(character: entity)
         case .episode(let entity): EpisodeDetailView(episode: entity)
         case .location(let entity): LocationDetailView(location: entity)
         }

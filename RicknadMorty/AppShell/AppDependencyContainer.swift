@@ -5,6 +5,7 @@ import AppStorage
 import AppNetwork
 import AuthFeatureInterface
 import AuthFeature
+import HomeFeature
 import HomeFeatureInterface
 
 // MARK: - App Dependency Container
@@ -37,12 +38,10 @@ final class AppDependencyContainer {
     // MARK: - Home Feature
 
     func makeHomeFeature(delegate: HomeFeatureDelegate?) -> HomeFeatureInterface {
-        let service: HomeServiceProtocol = HomeService(networkClient: networkClient)
-        let repository: HomeRepositoryProtocol = HomeRepository(service: service, logger: logger)
-        let useCase: GetHomeUseCaseProtocol = GetHomeUseCase(repository: repository)
-
-        return HomeFeatureAssembly(
-            getHomeUseCase: useCase,
+        HomeFeatureAssembly(
+            networkClient: networkClient,
+            logger: logger,
+            favoritesStore: favoritesStore,
             delegate: delegate
         )
     }
