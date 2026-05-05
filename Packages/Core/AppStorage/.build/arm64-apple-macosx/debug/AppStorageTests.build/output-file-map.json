@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/Tests/AppStorageTests/MockTokenStorageTests.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/MockTokenStorageTests.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/MockTokenStorageTests.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/MockTokenStorageTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/MockTokenStorageTests.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorageTests.build/MockTokenStorageTests.dia"
+  }
+}

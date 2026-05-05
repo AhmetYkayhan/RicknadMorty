@@ -1,0 +1,3 @@
+module AppStorage {
+    header "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/include/AppStorage-Swift.h"
+}

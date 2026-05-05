@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.dia"
+  }
+}

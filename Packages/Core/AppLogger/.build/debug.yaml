@@ -1,0 +1,112 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AppLogger-arm64-apple-macosx26.0-debug.module": ["<AppLogger-arm64-apple-macosx26.0-debug.module>"]
+  "AppLoggerPackageTests-arm64-apple-macosx26.0-debug.module": ["<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.module>"]
+  "AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test": ["<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test>"]
+  "AppLoggerTests-arm64-apple-macosx26.0-debug.module": ["<AppLoggerTests-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AppLogger-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<AppLogger-arm64-apple-macosx26.0-debug.module>","<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test>","<AppLoggerTests-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Tests/AppLoggerTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/sources"]
+    description: "Write auxiliary file /Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/sources"
+
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.derived/runner.swift"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/sources"
+
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.derived/runner.swift"]
+
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/runner.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/AppLoggerTests.swift.o"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.product/Objects.LinkFileList"
+
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Tests/AppLoggerTests/AppLoggerTests.swift"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/sources"]
+    description: "Write auxiliary file /Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/sources"
+
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<AppLogger-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule"]
+    outputs: ["<AppLogger-arm64-apple-macosx26.0-debug.module>"]
+
+  "<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/runner.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerPackageTests.swiftmodule"]
+    outputs: ["<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.xctest/Contents/MacOS/AppLoggerPackageTests"]
+    outputs: ["<AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test>"]
+
+  "<AppLoggerTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/AppLoggerTests.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerTests.swiftmodule"]
+    outputs: ["<AppLoggerTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.AppLogger-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/sources"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule"]
+    description: "Compiling Swift Module 'AppLogger' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AppLogger","-emit-dependencies","-emit-module","-emit-module-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule","-output-file-map","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/sources","-I","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/include/AppLogger-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","applogger"]
+
+  "C.AppLoggerPackageTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.derived/runner.swift","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerTests.swiftmodule","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/sources"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/runner.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'AppLoggerPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AppLoggerPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerPackageTests.swiftmodule","-output-file-map","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/sources","-I","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/include/AppLoggerPackageTests-Swift.h","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","applogger"]
+
+  "C.AppLoggerPackageTests-arm64-apple-macosx26.0-debug.test":
+    tool: shell
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.build/runner.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/AppLoggerTests.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.xctest/Contents/MacOS/AppLoggerPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/AppLoggerPackageTests.xctest/Contents/MacOS/AppLoggerPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug","-o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.xctest/Contents/MacOS/AppLoggerPackageTests","-module-name","AppLoggerPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerPackageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerTests.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.AppLoggerTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Tests/AppLoggerTests/AppLoggerTests.swift","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/sources"]
+    outputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/AppLoggerTests.swift.o","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerTests.swiftmodule"]
+    description: "Compiling Swift Module 'AppLoggerTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AppLoggerTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules/AppLoggerTests.swiftmodule","-output-file-map","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/AppLoggerTests.build/sources","-I","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","applogger"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Tests/AppLoggerTests/","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Package.swift","/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

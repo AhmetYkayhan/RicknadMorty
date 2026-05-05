@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/Sources/ProfileFeatureInterface/ProfileFeatureInterface.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/ProfileFeatureInterface.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/ProfileFeatureInterface.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/ProfileFeatureInterface~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/ProfileFeatureInterface.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/ProfileFeatureInterface/.build/arm64-apple-macosx/debug/ProfileFeatureInterface.build/ProfileFeatureInterface.dia"
+  }
+}

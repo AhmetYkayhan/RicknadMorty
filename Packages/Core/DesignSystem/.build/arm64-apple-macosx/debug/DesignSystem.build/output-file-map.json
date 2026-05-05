@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Components/AppButton.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppButton.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppButton.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppButton~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppButton.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppButton.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Components/AppTextField.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTextField.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTextField.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTextField~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTextField.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTextField.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Components/ErrorView.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/ErrorView.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/ErrorView.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/ErrorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/ErrorView.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/ErrorView.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Components/LoadingView.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/LoadingView.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/LoadingView.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/LoadingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/LoadingView.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/LoadingView.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Tokens/AppColors.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppColors.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppColors.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppColors~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppColors.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppColors.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Tokens/AppSpacing.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppSpacing.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppSpacing.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppSpacing~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppSpacing.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppSpacing.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Sources/DesignSystem/Tokens/AppTypography.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTypography.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTypography.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTypography~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTypography.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystem.build/AppTypography.dia"
+  }
+}

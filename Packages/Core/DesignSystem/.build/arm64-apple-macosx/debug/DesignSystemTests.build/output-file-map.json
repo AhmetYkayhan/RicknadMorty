@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/Tests/DesignSystemTests/TokensTests.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/TokensTests.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/TokensTests.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/TokensTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/TokensTests.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/DesignSystem/.build/arm64-apple-macosx/debug/DesignSystemTests.build/TokensTests.dia"
+  }
+}

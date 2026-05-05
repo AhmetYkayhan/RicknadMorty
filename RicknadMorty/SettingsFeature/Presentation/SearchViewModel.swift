@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Observation
+import AppCore
 
 // MARK: - Search ViewModel
 

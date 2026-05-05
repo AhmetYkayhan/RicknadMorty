@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/Endpoint.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/HTTPMethod.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClient.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClientProtocol.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/RequestBuilder.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.dia"
+  }
+}

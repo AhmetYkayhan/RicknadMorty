@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Tests/AppCoreTests/AppErrorTests.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/AppErrorTests.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/AppErrorTests.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/AppErrorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/AppErrorTests.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/.build/arm64-apple-macosx/debug/AppCoreTests.build/AppErrorTests.dia"
+  }
+}

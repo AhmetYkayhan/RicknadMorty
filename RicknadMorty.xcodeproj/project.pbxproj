@@ -10,6 +10,15 @@
 		63382DB52FA4DED30061A6F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB42FA4DED30061A6F4 /* FirebaseAuth */; };
 		63382DB72FA4DED30061A6F4 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB62FA4DED30061A6F4 /* FirebaseCore */; };
 		63382DB92FA4DED30061A6F4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB82FA4DED30061A6F4 /* FirebaseFirestore */; };
+		63A0360A2FA9FEFF00D0701E /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036092FA9FEFF00D0701E /* AppLogger */; };
+		63A0360D2FA9FFDD00D0701E /* AppStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0360C2FA9FFDD00D0701E /* AppStorage */; };
+		63A036102FAA00E200D0701E /* AppNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0360F2FAA00E200D0701E /* AppNetwork */; };
+		63A036132FAA025200D0701E /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036122FAA025200D0701E /* DesignSystem */; };
+		63A036162FAA051B00D0701E /* AuthFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036152FAA051B00D0701E /* AuthFeatureInterface */; };
+		63A036192FAA052F00D0701E /* HomeFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036182FAA052F00D0701E /* HomeFeatureInterface */; };
+		63A0361C2FAA054800D0701E /* ProfileFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0361B2FAA054800D0701E /* ProfileFeatureInterface */; };
+		63A0361F2FAA055E00D0701E /* SettingsFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */; };
+		63B492742FA959070098376A /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = 63B492732FA959070098376A /* AppCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +38,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A036192FAA052F00D0701E /* HomeFeatureInterface in Frameworks */,
+				63A036102FAA00E200D0701E /* AppNetwork in Frameworks */,
+				63A0361F2FAA055E00D0701E /* SettingsFeatureInterface in Frameworks */,
+				63A0361C2FAA054800D0701E /* ProfileFeatureInterface in Frameworks */,
+				63A0360D2FA9FFDD00D0701E /* AppStorage in Frameworks */,
 				63382DB72FA4DED30061A6F4 /* FirebaseCore in Frameworks */,
+				63A036132FAA025200D0701E /* DesignSystem in Frameworks */,
+				63A036162FAA051B00D0701E /* AuthFeatureInterface in Frameworks */,
+				63A0360A2FA9FEFF00D0701E /* AppLogger in Frameworks */,
+				63B492742FA959070098376A /* AppCore in Frameworks */,
 				63382DB52FA4DED30061A6F4 /* FirebaseAuth in Frameworks */,
 				63382DB92FA4DED30061A6F4 /* FirebaseFirestore in Frameworks */,
 			);
@@ -42,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				6325E4962F9FDB250072D1AD /* RicknadMorty */,
+				63B492722FA958970098376A /* Frameworks */,
 				6325E4952F9FDB250072D1AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +71,13 @@
 				6325E4942F9FDB250072D1AD /* RicknadMorty.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		63B492722FA958970098376A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +103,15 @@
 				63382DB42FA4DED30061A6F4 /* FirebaseAuth */,
 				63382DB62FA4DED30061A6F4 /* FirebaseCore */,
 				63382DB82FA4DED30061A6F4 /* FirebaseFirestore */,
+				63B492732FA959070098376A /* AppCore */,
+				63A036092FA9FEFF00D0701E /* AppLogger */,
+				63A0360C2FA9FFDD00D0701E /* AppStorage */,
+				63A0360F2FAA00E200D0701E /* AppNetwork */,
+				63A036122FAA025200D0701E /* DesignSystem */,
+				63A036152FAA051B00D0701E /* AuthFeatureInterface */,
+				63A036182FAA052F00D0701E /* HomeFeatureInterface */,
+				63A0361B2FAA054800D0701E /* ProfileFeatureInterface */,
+				63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */,
 			);
 			productName = RicknadMorty;
 			productReference = 6325E4942F9FDB250072D1AD /* RicknadMorty.app */;
@@ -108,6 +143,15 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				63382DB32FA4DED20061A6F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				63B4926F2FA958490098376A /* XCLocalSwiftPackageReference "Packages/Core/AppCore" */,
+				63A036082FA9FEFF00D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppLogger" */,
+				63A0360B2FA9FFDD00D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppStorage" */,
+				63A0360E2FAA00E200D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppNetwork" */,
+				63A036112FAA025100D0701E /* XCLocalSwiftPackageReference "Packages/Core/DesignSystem" */,
+				63A036142FAA051B00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/AuthFeatureInterface" */,
+				63A036172FAA052F00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/HomeFeatureInterface" */,
+				63A0361A2FAA054800D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/ProfileFeatureInterface" */,
+				63A0361D2FAA055E00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/SettingsFeatureInterface" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6325E4952F9FDB250072D1AD /* Products */;
@@ -274,8 +318,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,8 +350,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,6 +392,45 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		63A036082FA9FEFF00D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppLogger" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core/AppLogger;
+		};
+		63A0360B2FA9FFDD00D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppStorage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core/AppStorage;
+		};
+		63A0360E2FAA00E200D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppNetwork" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core/AppNetwork;
+		};
+		63A036112FAA025100D0701E /* XCLocalSwiftPackageReference "Packages/Core/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core/DesignSystem;
+		};
+		63A036142FAA051B00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/AuthFeatureInterface" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FeatureInterfaces/AuthFeatureInterface;
+		};
+		63A036172FAA052F00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/HomeFeatureInterface" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FeatureInterfaces/HomeFeatureInterface;
+		};
+		63A0361A2FAA054800D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/ProfileFeatureInterface" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FeatureInterfaces/ProfileFeatureInterface;
+		};
+		63A0361D2FAA055E00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/SettingsFeatureInterface" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FeatureInterfaces/SettingsFeatureInterface;
+		};
+		63B4926F2FA958490098376A /* XCLocalSwiftPackageReference "Packages/Core/AppCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core/AppCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		63382DB32FA4DED20061A6F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -374,6 +457,43 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63382DB32FA4DED20061A6F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		63A036092FA9FEFF00D0701E /* AppLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppLogger;
+		};
+		63A0360C2FA9FFDD00D0701E /* AppStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppStorage;
+		};
+		63A0360F2FAA00E200D0701E /* AppNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppNetwork;
+		};
+		63A036122FAA025200D0701E /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		63A036152FAA051B00D0701E /* AuthFeatureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthFeatureInterface;
+		};
+		63A036182FAA052F00D0701E /* HomeFeatureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFeatureInterface;
+		};
+		63A0361B2FAA054800D0701E /* ProfileFeatureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileFeatureInterface;
+		};
+		63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsFeatureInterface;
+		};
+		63B492732FA959070098376A /* AppCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63B4926F2FA958490098376A /* XCLocalSwiftPackageReference "Packages/Core/AppCore" */;
+			productName = AppCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,0 +1,3 @@
+module AppNetwork {
+    header "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/include/AppNetwork-Swift.h"
+}

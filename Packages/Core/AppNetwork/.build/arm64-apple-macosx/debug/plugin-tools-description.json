@@ -1,0 +1,1133 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.xctest/Contents/MacOS/AppNetworkPackageTests",
+      "packagePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork",
+      "productName" : "AppNetworkPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.AppCore-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/AppError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/LoadableState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/ViewState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppCore",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppCore.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/AppError.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/include/AppCore-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appcore"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/AppError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/AppError.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/LoadableState.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/ViewState.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppLogger-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppLogger",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/include/AppLogger-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "applogger"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppNetwork-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/Endpoint.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/HTTPMethod.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClientProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/RequestBuilder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppLogger.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppNetwork",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetwork.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.swift.o",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/include/AppNetwork-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appnetwork"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetwork.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/Endpoint.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/HTTPMethod.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClient.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClientProtocol.swift",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/RequestBuilder.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppNetworkPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetworkTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppNetworkPackageTests",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetworkPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/include/AppNetworkPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appnetwork"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetworkPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppNetworkTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Tests/AppNetworkTests/HTTPMethodTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetwork.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppNetworkTests",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetworkTests.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appnetwork"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules/AppNetworkTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Tests/AppNetworkTests/HTTPMethodTests.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "AppCore" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppCore",
+      "-package-name",
+      "appcore",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/AppError.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/LoadableState.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/ViewState.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/include/AppCore-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appcore",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppLogger" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppLogger",
+      "-package-name",
+      "applogger",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/include/AppLogger-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "applogger",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppNetwork" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppNetwork",
+      "-package-name",
+      "appnetwork",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/Endpoint.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/HTTPMethod.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClient.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClientProtocol.swift",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/RequestBuilder.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/include/AppNetwork-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appnetwork",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppNetworkPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppNetworkPackageTests",
+      "-package-name",
+      "appnetwork",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/include/AppNetworkPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appnetwork",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppNetworkTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppNetworkTests",
+      "-package-name",
+      "appnetwork",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Tests/AppNetworkTests/HTTPMethodTests.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appnetwork",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "AppCore" : [
+
+    ],
+    "AppLogger" : [
+
+    ],
+    "AppNetwork" : [
+      "AppLogger",
+      "AppCore"
+    ],
+    "AppNetworkPackageTests" : [
+      "AppNetworkTests",
+      "AppNetwork",
+      "AppLogger",
+      "AppCore"
+    ],
+    "AppNetworkTests" : [
+      "AppNetwork",
+      "AppLogger",
+      "AppCore"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/AppError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/LoadableState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/ViewState.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppLogger/Sources/AppLogger/Logger.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/Endpoint.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/HTTPMethod.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/NetworkClientProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Sources/AppNetwork/RequestBuilder.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/AppError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppLogger.build/Logger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/Endpoint.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/HTTPMethod.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/NetworkClientProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetwork.build/RequestBuilder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Tests/AppNetworkTests/HTTPMethodTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

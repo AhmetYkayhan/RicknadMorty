@@ -1,0 +1,27 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "appcore",
+          "kind" : "fileSystem",
+          "location" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore",
+          "name" : "AppCore"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore"
+        },
+        "subpath" : "appcore"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

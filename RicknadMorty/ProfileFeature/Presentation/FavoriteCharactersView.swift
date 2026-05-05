@@ -1,4 +1,5 @@
 import SwiftUI
+import DesignSystem
 
 // MARK: - Favorite Characters View
 

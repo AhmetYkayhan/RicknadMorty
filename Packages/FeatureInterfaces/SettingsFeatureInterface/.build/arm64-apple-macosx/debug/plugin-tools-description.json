@@ -1,0 +1,638 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.xctest/Contents/MacOS/SettingsFeatureInterfacePackageTests",
+      "packagePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface",
+      "productName" : "SettingsFeatureInterfacePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SettingsFeatureInterface-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Sources/SettingsFeatureInterface/SettingsFeatureInterface.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SettingsFeatureInterface",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterface.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/SettingsFeatureInterface.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/include/SettingsFeatureInterface-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "settingsfeatureinterface"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/SettingsFeatureInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterface.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Sources/SettingsFeatureInterface/SettingsFeatureInterface.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SettingsFeatureInterfacePackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterfaceTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SettingsFeatureInterfacePackageTests",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterfacePackageTests.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/include/SettingsFeatureInterfacePackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "settingsfeatureinterface"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterfacePackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SettingsFeatureInterfaceTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/sources",
+      "importPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Tests/SettingsFeatureInterfaceTests/SettingsFeatureInterfaceTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterface.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SettingsFeatureInterfaceTests",
+      "moduleOutputPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterfaceTests.swiftmodule",
+      "objects" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/SettingsFeatureInterfaceTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "settingsfeatureinterface"
+      ],
+      "outputFileMapPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/SettingsFeatureInterfaceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules/SettingsFeatureInterfaceTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Tests/SettingsFeatureInterfaceTests/SettingsFeatureInterfaceTests.swift"
+      ],
+      "tempsPath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SettingsFeatureInterface" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SettingsFeatureInterface",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Sources/SettingsFeatureInterface/SettingsFeatureInterface.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/include/SettingsFeatureInterface-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SettingsFeatureInterfacePackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SettingsFeatureInterfacePackageTests",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/include/SettingsFeatureInterfacePackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SettingsFeatureInterfaceTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SettingsFeatureInterfaceTests",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-c",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Tests/SettingsFeatureInterfaceTests/SettingsFeatureInterfaceTests.swift",
+      "-I",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "settingsfeatureinterface",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SettingsFeatureInterface" : [
+
+    ],
+    "SettingsFeatureInterfacePackageTests" : [
+      "SettingsFeatureInterfaceTests",
+      "SettingsFeatureInterface"
+    ],
+    "SettingsFeatureInterfaceTests" : [
+      "SettingsFeatureInterface"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Sources/SettingsFeatureInterface/SettingsFeatureInterface.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterface.build/SettingsFeatureInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/SettingsFeatureInterfaceTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfacePackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/Tests/SettingsFeatureInterfaceTests/SettingsFeatureInterfaceTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/SettingsFeatureInterfaceTests.build/sources"
+    },
+    "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/SettingsFeatureInterface/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

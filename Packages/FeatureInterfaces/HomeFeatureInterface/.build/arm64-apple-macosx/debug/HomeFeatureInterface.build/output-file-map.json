@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/Sources/HomeFeatureInterface/HomeFeatureInterface.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/HomeFeatureInterface.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/HomeFeatureInterface.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/HomeFeatureInterface~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/HomeFeatureInterface.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/HomeFeatureInterface/.build/arm64-apple-macosx/debug/HomeFeatureInterface.build/HomeFeatureInterface.dia"
+  }
+}

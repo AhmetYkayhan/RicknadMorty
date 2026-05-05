@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/Tests/AppNetworkTests/HTTPMethodTests.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppNetwork/.build/arm64-apple-macosx/debug/AppNetworkTests.build/HTTPMethodTests.dia"
+  }
+}

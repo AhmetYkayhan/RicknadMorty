@@ -1,0 +1,3 @@
+module AuthFeatureInterface {
+    header "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/include/AuthFeatureInterface-Swift.h"
+}

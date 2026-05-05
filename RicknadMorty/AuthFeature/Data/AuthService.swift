@@ -1,4 +1,5 @@
 import Foundation
+import AppNetwork
 
 // MARK: - Auth Service Protocol
 

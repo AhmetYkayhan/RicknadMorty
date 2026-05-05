@@ -1,4 +1,5 @@
 import Foundation
+import AppNetwork
 
 // MARK: - Search Endpoints (Rick and Morty API)
 

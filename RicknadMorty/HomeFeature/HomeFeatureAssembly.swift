@@ -1,4 +1,5 @@
 import SwiftUI
+import HomeFeatureInterface
 
 // MARK: - Home Feature Assembly
 

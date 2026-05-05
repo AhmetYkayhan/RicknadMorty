@@ -1,5 +1,6 @@
 import Foundation
 import FirebaseAuth
+import AppCore
 
 // MARK: - Firebase Auth Service
 

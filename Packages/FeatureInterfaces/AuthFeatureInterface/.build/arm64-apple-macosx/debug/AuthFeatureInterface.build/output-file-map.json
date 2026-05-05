@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/Sources/AuthFeatureInterface/AuthFeatureInterface.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/AuthFeatureInterface.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/AuthFeatureInterface.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/AuthFeatureInterface~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/AuthFeatureInterface.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterface.build/AuthFeatureInterface.dia"
+  }
+}

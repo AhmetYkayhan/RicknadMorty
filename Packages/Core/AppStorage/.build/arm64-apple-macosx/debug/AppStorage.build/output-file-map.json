@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/Sources/AppStorage/KeychainTokenStorage.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/KeychainTokenStorage.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/KeychainTokenStorage.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/KeychainTokenStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/KeychainTokenStorage.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/KeychainTokenStorage.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/Sources/AppStorage/MockTokenStorage.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/MockTokenStorage.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/MockTokenStorage.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/MockTokenStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/MockTokenStorage.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/MockTokenStorage.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/Sources/AppStorage/TokenStorageProtocol.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/TokenStorageProtocol.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/TokenStorageProtocol.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/TokenStorageProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/TokenStorageProtocol.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppStorage.build/TokenStorageProtocol.dia"
+  }
+}

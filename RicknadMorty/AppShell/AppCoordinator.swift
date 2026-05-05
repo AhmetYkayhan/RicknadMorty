@@ -1,6 +1,8 @@
 import SwiftUI
 import Observation
 import FirebaseAuth
+import AuthFeatureInterface
+import HomeFeatureInterface
 
 // MARK: - App Coordinator
 

@@ -1,4 +1,6 @@
 import Foundation
+import AppCore
+import AppNetwork
 
 // MARK: - Search Service Protocol
 

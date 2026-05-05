@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
 import Observation
+import AppCore
+import HomeFeatureInterface
 
 // MARK: - Home ViewModel
 

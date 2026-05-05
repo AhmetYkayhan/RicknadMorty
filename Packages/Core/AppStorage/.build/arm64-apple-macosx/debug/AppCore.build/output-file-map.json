@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/AppError.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/AppError.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/AppError.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/AppError~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/AppError.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/AppError.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/LoadableState.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/LoadableState.dia"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppCore/Sources/AppCore/ViewState.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/ViewState~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/Core/AppStorage/.build/arm64-apple-macosx/debug/AppCore.build/ViewState.dia"
+  }
+}

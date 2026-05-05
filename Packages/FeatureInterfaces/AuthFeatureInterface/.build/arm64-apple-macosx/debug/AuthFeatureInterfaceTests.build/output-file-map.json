@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/master.swiftdeps"
+  },
+  "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/Tests/AuthFeatureInterfaceTests/AuthFeatureInterfaceTests.swift": {
+    "dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/AuthFeatureInterfaceTests.d",
+    "object": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/AuthFeatureInterfaceTests.swift.o",
+    "swiftmodule": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/AuthFeatureInterfaceTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/AuthFeatureInterfaceTests.swiftdeps",
+    "diagnostics": "/Users/yasinkayhan/Documents/RicknadMorty/Packages/FeatureInterfaces/AuthFeatureInterface/.build/arm64-apple-macosx/debug/AuthFeatureInterfaceTests.build/AuthFeatureInterfaceTests.dia"
+  }
+}
