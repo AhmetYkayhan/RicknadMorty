@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+**/xcuserdata/
+
+# Build products
+build/
+DerivedData/
+
+# Swift Package Manager (local / CLI)
+.build/
+.swiftpm/
+Packages/**/*.xcworkspace/xcuserdata/
+
+# CocoaPods / Carthage (opsiyonel)
+Pods/
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Instruments / profiling
+*.trace
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Environment / secrets (gerekirse uncomment)
+# .env
+# *.pem
