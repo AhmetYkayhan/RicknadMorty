@@ -5,9 +5,8 @@ import HomeFeature
 
 struct MainTabView: View {
     let homeView: AnyView
+    let settingsView: AnyView
     let favoritesStore: FavoritesStore
-    let searchViewModel: SearchViewModel
-    var onLogout: (() -> Void)?
 
     var body: some View {
         TabView {
@@ -21,13 +20,10 @@ struct MainTabView: View {
                     Label("Profile", systemImage: "person")
                 }
 
-            SettingsView(
-                viewModel: searchViewModel,
-                onLogout: onLogout
-            )
-            .tabItem {
-                Label("Settings", systemImage: "gearshape")
-            }
+            settingsView
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
         }
         .environment(\.favoritesStore, favoritesStore)
     }

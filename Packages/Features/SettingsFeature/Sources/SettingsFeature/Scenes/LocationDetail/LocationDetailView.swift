@@ -2,10 +2,14 @@ import SwiftUI
 
 // MARK: - Location Detail View
 
-struct LocationDetailView: View {
+public struct LocationDetailView: View {
     let location: LocationEntity
 
-    var body: some View {
+    public init(location: LocationEntity) {
+        self.location = location
+    }
+
+    public var body: some View {
         Form {
             Section("Location") {
                 LabeledContent("Name", value: location.name)
@@ -14,6 +18,8 @@ struct LocationDetailView: View {
             }
         }
         .navigationTitle(location.name)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }

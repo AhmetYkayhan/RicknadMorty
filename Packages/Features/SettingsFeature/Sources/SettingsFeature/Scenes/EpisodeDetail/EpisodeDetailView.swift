@@ -2,10 +2,14 @@ import SwiftUI
 
 // MARK: - Episode Detail View
 
-struct EpisodeDetailView: View {
+public struct EpisodeDetailView: View {
     let episode: EpisodeEntity
 
-    var body: some View {
+    public init(episode: EpisodeEntity) {
+        self.episode = episode
+    }
+
+    public var body: some View {
         Form {
             Section("Episode") {
                 LabeledContent("Name", value: episode.name)
@@ -14,6 +18,8 @@ struct EpisodeDetailView: View {
             }
         }
         .navigationTitle(episode.name)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }

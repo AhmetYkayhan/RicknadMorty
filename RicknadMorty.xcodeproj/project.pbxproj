@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63143F4F2FAAB1A2004C6D74 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 63143F4E2FAAB1A2004C6D74 /* HomeFeature */; };
+		63555ED22FCAFE000000B003 /* SettingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 63555ED12FCAFE000000B002 /* SettingsFeature */; };
 		63382DB52FA4DED30061A6F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB42FA4DED30061A6F4 /* FirebaseAuth */; };
 		63382DB72FA4DED30061A6F4 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB62FA4DED30061A6F4 /* FirebaseCore */; };
 		63382DB92FA4DED30061A6F4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63382DB82FA4DED30061A6F4 /* FirebaseFirestore */; };
@@ -49,6 +50,7 @@
 				63A036132FAA025200D0701E /* DesignSystem in Frameworks */,
 				63A036162FAA051B00D0701E /* AuthFeatureInterface in Frameworks */,
 				63143F4F2FAAB1A2004C6D74 /* HomeFeature in Frameworks */,
+				63555ED22FCAFE000000B003 /* SettingsFeature in Frameworks */,
 				63CAFE012FCAFE000000A001 /* AuthFeature in Frameworks */,
 				63A0360A2FA9FEFF00D0701E /* AppLogger in Frameworks */,
 				63B492742FA959070098376A /* AppCore in Frameworks */,
@@ -118,6 +120,7 @@
 				63A0361B2FAA054800D0701E /* ProfileFeatureInterface */,
 				63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */,
 				63143F4E2FAAB1A2004C6D74 /* HomeFeature */,
+				63555ED12FCAFE000000B002 /* SettingsFeature */,
 			);
 			productName = RicknadMorty;
 			productReference = 6325E4942F9FDB250072D1AD /* RicknadMorty.app */;
@@ -160,6 +163,7 @@
 				63A0361A2FAA054800D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/ProfileFeatureInterface" */,
 				63A0361D2FAA055E00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/SettingsFeatureInterface" */,
 				63143F4D2FAAB1A2004C6D74 /* XCLocalSwiftPackageReference "Packages/Features/HomeFeature" */,
+				63555ED02FCAFE000000B001 /* XCLocalSwiftPackageReference "Packages/Features/SettingsFeature" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6325E4952F9FDB250072D1AD /* Products */;
@@ -405,6 +409,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Features/HomeFeature;
 		};
+		63555ED02FCAFE000000B001 /* XCLocalSwiftPackageReference "Packages/Features/SettingsFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Features/SettingsFeature;
+		};
 		63A036082FA9FEFF00D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppLogger" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Core/AppLogger;
@@ -462,6 +470,10 @@
 		63143F4E2FAAB1A2004C6D74 /* HomeFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomeFeature;
+		};
+		63555ED12FCAFE000000B002 /* SettingsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsFeature;
 		};
 		63382DB42FA4DED30061A6F4 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

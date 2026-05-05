@@ -7,6 +7,8 @@ import AuthFeatureInterface
 import AuthFeature
 import HomeFeature
 import HomeFeatureInterface
+import SettingsFeature
+import SettingsFeatureInterface
 
 // MARK: - App Dependency Container
 
@@ -46,13 +48,14 @@ final class AppDependencyContainer {
         )
     }
 
-    // MARK: - Search (Settings)
+    // MARK: - Settings Feature
 
-    func makeSearchViewModel() -> SearchViewModel {
-        let service: SearchServiceProtocol = SearchService(networkClient: networkClient)
-        let repository: SearchRepositoryProtocol = SearchRepository(service: service, logger: logger)
-        let useCase: SearchUseCaseProtocol = SearchUseCase(repository: repository)
-        return SearchViewModel(useCase: useCase)
+    func makeSettingsFeature(delegate: SettingsFeatureDelegate?) -> SettingsFeatureInterface {
+        SettingsFeatureAssembly(
+            networkClient: networkClient,
+            logger: logger,
+            delegate: delegate
+        )
     }
 
     // MARK: - Helpers

@@ -2,18 +2,18 @@ import SwiftUI
 import DesignSystem
 import HomeFeature
 
-// MARK: - Search Results View
-
 struct SearchResultsView: View {
-    let viewModel: SearchViewModel
+    let interactor: SearchResultsInteractor
+    @Bindable var presenter: SearchResultsPresenter
 
     var body: some View {
         Group {
-            if viewModel.isLoading && viewModel.results.isEmpty {
+            if presenter.viewState.isLoading && presenter.viewState.results.isEmpty {
                 LoadingView(message: "Searching...")
-            } else if let error = viewModel.errorMessage, viewModel.results.isEmpty {
-                ErrorView(message: error) { viewModel.search() }
-            } else if viewModel.results.isEmpty {
+            } else if let error = presenter.viewState.errorMessage,
+                      presenter.viewState.results.isEmpty {
+                ErrorView(message: error) { interactor.handle(.retry) }
+            } else if presenter.viewState.hasSearched && presenter.viewState.results.isEmpty {
                 ContentUnavailableView(
                     "Sonuç bulunamadı",
                     systemImage: "magnifyingglass",
@@ -24,17 +24,18 @@ struct SearchResultsView: View {
             }
         }
         .navigationTitle("Results")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         .navigationDestination(for: SearchResultEntity.self) { result in
             destinationView(for: result)
         }
+        .onAppear { interactor.handle(.onAppear) }
     }
-
-    // MARK: - List
 
     private var resultsList: some View {
         List {
-            ForEach(viewModel.results) { result in
+            ForEach(presenter.viewState.results) { result in
                 NavigationLink(value: result) {
                     row(for: result)
                 }
@@ -46,18 +47,21 @@ struct SearchResultsView: View {
     @ViewBuilder
     private func row(for result: SearchResultEntity) -> some View {
         switch result {
-        case .character(let entity): CharacterSearchRow(character: entity)
-        case .episode(let entity): EpisodeSearchRow(episode: entity)
-        case .location(let entity): LocationSearchRow(location: entity)
+        case let .character(entity): CharacterSearchRow(character: entity)
+        case let .episode(entity): EpisodeSearchRow(episode: entity)
+        case let .location(entity): LocationSearchRow(location: entity)
         }
     }
 
     @ViewBuilder
     private func destinationView(for result: SearchResultEntity) -> some View {
         switch result {
-        case .character(let entity): CharacterDetailSceneFactory.make(character: entity)
-        case .episode(let entity): EpisodeDetailView(episode: entity)
-        case .location(let entity): LocationDetailView(location: entity)
+        case let .character(entity):
+            CharacterDetailSceneFactory.make(character: entity)
+        case let .episode(entity):
+            EpisodeDetailView(episode: entity)
+        case let .location(entity):
+            LocationDetailView(location: entity)
         }
     }
 }
@@ -66,13 +70,10 @@ struct SearchResultsView: View {
 
 private struct CharacterSearchRow: View {
     let character: HomeEntity
-
     var body: some View {
         HStack(spacing: AppSpacing.sm) {
             AsyncImage(url: character.imageURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                image.resizable().aspectRatio(contentMode: .fill)
             } placeholder: {
                 Color.gray.opacity(0.3)
             }
@@ -92,7 +93,6 @@ private struct CharacterSearchRow: View {
 
 private struct EpisodeSearchRow: View {
     let episode: EpisodeEntity
-
     var body: some View {
         VStack(alignment: .leading, spacing: AppSpacing.xxs) {
             Text(episode.name).font(AppTypography.headline)
@@ -106,7 +106,6 @@ private struct EpisodeSearchRow: View {
 
 private struct LocationSearchRow: View {
     let location: LocationEntity
-
     var body: some View {
         VStack(alignment: .leading, spacing: AppSpacing.xxs) {
             Text(location.name).font(AppTypography.headline)

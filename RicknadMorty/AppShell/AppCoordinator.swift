@@ -4,6 +4,7 @@ import FirebaseAuth
 import AuthFeatureInterface
 import HomeFeature
 import HomeFeatureInterface
+import SettingsFeatureInterface
 
 // MARK: - App Coordinator
 
@@ -17,7 +18,7 @@ final class AppCoordinator {
     private let container: AppDependencyContainer
     private var _authFeature: AuthFeatureInterface?
     private var _homeFeature: HomeFeatureInterface?
-    private var _searchViewModel: SearchViewModel?
+    private var _settingsFeature: SettingsFeatureInterface?
 
     @ObservationIgnored
     private var authFeature: AuthFeatureInterface {
@@ -36,17 +37,16 @@ final class AppCoordinator {
     }
 
     @ObservationIgnored
-    private var searchViewModel: SearchViewModel {
-        if let existing = _searchViewModel { return existing }
-        let viewModel = container.makeSearchViewModel()
-        _searchViewModel = viewModel
-        return viewModel
+    private var settingsFeature: SettingsFeatureInterface {
+        if let existing = _settingsFeature { return existing }
+        let feature = container.makeSettingsFeature(delegate: self)
+        _settingsFeature = feature
+        return feature
     }
 
     init(container: AppDependencyContainer) {
         self.container = container
 
-        // Start on home if already authenticated
         if container.isAuthenticated {
             currentRoute = .home
         }
@@ -58,7 +58,7 @@ final class AppCoordinator {
         try? Auth.auth().signOut()
         _authFeature = nil
         _homeFeature = nil
-        _searchViewModel = nil
+        _settingsFeature = nil
         withAnimation {
             currentRoute = .login
         }
@@ -76,9 +76,8 @@ final class AppCoordinator {
         case .home, .characterDetail, .settings, .profile:
             MainTabView(
                 homeView: homeFeature.makeHomeView(),
-                favoritesStore: container.favoritesStore,
-                searchViewModel: searchViewModel,
-                onLogout: { [weak self] in self?.logout() }
+                settingsView: settingsFeature.makeSettingsView(),
+                favoritesStore: container.favoritesStore
             )
             .transition(.move(edge: .trailing))
         }
@@ -119,6 +118,19 @@ extension AppCoordinator: HomeFeatureDelegate {
             withAnimation {
                 currentRoute = .profile
             }
+        }
+    }
+}
+
+// MARK: - SettingsFeatureDelegate
+
+extension AppCoordinator: SettingsFeatureDelegate {
+    func settingsFeature(didSelect route: SettingsRoute) {
+        switch route {
+        case .logout:
+            logout()
+        case .about, .privacy:
+            break
         }
     }
 }
