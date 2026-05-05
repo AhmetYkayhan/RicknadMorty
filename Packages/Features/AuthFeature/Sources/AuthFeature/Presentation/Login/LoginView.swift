@@ -1,14 +1,18 @@
 import SwiftUI
-import AppLogger
-import AppStorage
 import DesignSystem
 
 // MARK: - Login View
 
-struct LoginView: View {
-    var viewModel: LoginViewModel
+public struct LoginView: View {
+    private let interactor: LoginInteractorProtocol
+    @Bindable private var presenter: LoginPresenter
 
-    var body: some View {
+    public init(interactor: LoginInteractorProtocol, presenter: LoginPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         ScrollView {
             VStack(spacing: AppSpacing.lg) {
                 headerSection
@@ -40,26 +44,35 @@ struct LoginView: View {
         .padding(.top, AppSpacing.xxl)
     }
 
+    @ViewBuilder
+    private var emailField: some View {
+        let field = AppTextField(
+            placeholder: "Email",
+            text: Binding(
+                get: { presenter.state.email },
+                set: { interactor.handle(.updateEmail($0)) }
+            ),
+            errorMessage: presenter.state.emailError
+        )
+        #if os(iOS)
+        field.keyboardType(.emailAddress)
+        #else
+        field
+        #endif
+    }
+
     private var formSection: some View {
         VStack(spacing: AppSpacing.md) {
-            AppTextField(
-                placeholder: "Email",
-                text: Binding(
-                    get: { viewModel.state.email },
-                    set: { viewModel.updateEmail($0) }
-                ),
-                errorMessage: viewModel.state.emailError
-            )
-            .keyboardType(.emailAddress)
+            emailField
 
             AppTextField(
                 placeholder: "Password",
                 text: Binding(
-                    get: { viewModel.state.password },
-                    set: { viewModel.updatePassword($0) }
+                    get: { presenter.state.password },
+                    set: { interactor.handle(.updatePassword($0)) }
                 ),
                 isSecure: true,
-                errorMessage: viewModel.state.passwordError
+                errorMessage: presenter.state.passwordError
             )
         }
     }
@@ -68,12 +81,12 @@ struct LoginView: View {
         VStack(spacing: AppSpacing.xs) {
             AppButton(
                 title: "Sign In",
-                isLoading: viewModel.state.isLoading
+                isLoading: presenter.state.isLoading
             ) {
-                viewModel.login()
+                interactor.handle(.login)
             }
 
-            if let error = viewModel.state.errorMessage {
+            if let error = presenter.state.errorMessage {
                 Text(error)
                     .font(AppTypography.caption)
                     .foregroundColor(AppColors.destructive)
@@ -84,30 +97,11 @@ struct LoginView: View {
 
     private var forgotPasswordButton: some View {
         Button {
-            viewModel.forgotPasswordTapped()
+            interactor.handle(.forgotPassword)
         } label: {
             Text("Forgot Password?")
                 .font(AppTypography.subheadline)
                 .foregroundColor(AppColors.accent)
         }
     }
-}
-
-#Preview {
-    let mockService = MockAuthService()
-    let mockStorage = MockTokenStorage()
-    let repository = AuthRepository(
-        service: mockService,
-        logger: AppLogger(category: "auth-preview")
-    )
-    let useCase = LoginUseCase(
-        repository: repository,
-        tokenStorage: mockStorage
-    )
-    let viewModel = LoginViewModel(
-        loginUseCase: useCase,
-        delegate: nil
-    )
-
-    LoginView(viewModel: viewModel)
 }

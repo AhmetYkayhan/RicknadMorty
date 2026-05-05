@@ -4,6 +4,7 @@ import AppLogger
 import AppStorage
 import AppNetwork
 import AuthFeatureInterface
+import AuthFeature
 import HomeFeatureInterface
 
 // MARK: - App Dependency Container
@@ -26,15 +27,8 @@ final class AppDependencyContainer {
     // MARK: - Auth Feature
 
     func makeAuthFeature(delegate: AuthFeatureDelegate?) -> AuthFeatureInterface {
-        let service: AuthServiceProtocol = FirebaseAuthService()
-        let repository: AuthRepositoryProtocol = AuthRepository(service: service, logger: logger)
-        let loginUseCase: LoginUseCaseProtocol = LoginUseCase(
-            repository: repository,
-            tokenStorage: tokenStorage
-        )
-
-        return AuthFeatureAssembly(
-            loginUseCase: loginUseCase,
+        AuthFeatureAssembly(
+            logger: logger,
             tokenStorage: tokenStorage,
             delegate: delegate
         )

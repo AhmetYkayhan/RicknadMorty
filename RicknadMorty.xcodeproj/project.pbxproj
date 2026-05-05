@@ -15,6 +15,7 @@
 		63A036102FAA00E200D0701E /* AppNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0360F2FAA00E200D0701E /* AppNetwork */; };
 		63A036132FAA025200D0701E /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036122FAA025200D0701E /* DesignSystem */; };
 		63A036162FAA051B00D0701E /* AuthFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036152FAA051B00D0701E /* AuthFeatureInterface */; };
+		63CAFE012FCAFE000000A001 /* AuthFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 63CAFE032FCAFE000000A003 /* AuthFeature */; };
 		63A036192FAA052F00D0701E /* HomeFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A036182FAA052F00D0701E /* HomeFeatureInterface */; };
 		63A0361C2FAA054800D0701E /* ProfileFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0361B2FAA054800D0701E /* ProfileFeatureInterface */; };
 		63A0361F2FAA055E00D0701E /* SettingsFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */; };
@@ -46,6 +47,7 @@
 				63382DB72FA4DED30061A6F4 /* FirebaseCore in Frameworks */,
 				63A036132FAA025200D0701E /* DesignSystem in Frameworks */,
 				63A036162FAA051B00D0701E /* AuthFeatureInterface in Frameworks */,
+				63CAFE012FCAFE000000A001 /* AuthFeature in Frameworks */,
 				63A0360A2FA9FEFF00D0701E /* AppLogger in Frameworks */,
 				63B492742FA959070098376A /* AppCore in Frameworks */,
 				63382DB52FA4DED30061A6F4 /* FirebaseAuth in Frameworks */,
@@ -109,6 +111,7 @@
 				63A0360F2FAA00E200D0701E /* AppNetwork */,
 				63A036122FAA025200D0701E /* DesignSystem */,
 				63A036152FAA051B00D0701E /* AuthFeatureInterface */,
+				63CAFE032FCAFE000000A003 /* AuthFeature */,
 				63A036182FAA052F00D0701E /* HomeFeatureInterface */,
 				63A0361B2FAA054800D0701E /* ProfileFeatureInterface */,
 				63A0361E2FAA055E00D0701E /* SettingsFeatureInterface */,
@@ -149,6 +152,7 @@
 				63A0360E2FAA00E200D0701E /* XCLocalSwiftPackageReference "Packages/Core/AppNetwork" */,
 				63A036112FAA025100D0701E /* XCLocalSwiftPackageReference "Packages/Core/DesignSystem" */,
 				63A036142FAA051B00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/AuthFeatureInterface" */,
+				63CAFE022FCAFE000000A002 /* XCLocalSwiftPackageReference "Packages/Features/AuthFeature" */,
 				63A036172FAA052F00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/HomeFeatureInterface" */,
 				63A0361A2FAA054800D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/ProfileFeatureInterface" */,
 				63A0361D2FAA055E00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/SettingsFeatureInterface" */,
@@ -413,6 +417,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/FeatureInterfaces/AuthFeatureInterface;
 		};
+		63CAFE022FCAFE000000A002 /* XCLocalSwiftPackageReference "Packages/Features/AuthFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Features/AuthFeature;
+		};
 		63A036172FAA052F00D0701E /* XCLocalSwiftPackageReference "Packages/FeatureInterfaces/HomeFeatureInterface" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/FeatureInterfaces/HomeFeatureInterface;
@@ -477,6 +485,10 @@
 		63A036152FAA051B00D0701E /* AuthFeatureInterface */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AuthFeatureInterface;
+		};
+		63CAFE032FCAFE000000A003 /* AuthFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthFeature;
 		};
 		63A036182FAA052F00D0701E /* HomeFeatureInterface */ = {
 			isa = XCSwiftPackageProductDependency;

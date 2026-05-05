@@ -1,0 +1,61 @@
+import SwiftUI
+import AppLogger
+import AppStorage
+import AuthFeatureInterface
+
+// MARK: - Auth Feature Assembly
+
+/// Concrete implementation of AuthFeatureInterface.
+/// Wires the VIP-S chain internally. AppShell only needs to provide
+/// logger, tokenStorage, and delegate.
+public final class AuthFeatureAssembly: AuthFeatureInterface, LoginRouterDelegate {
+    private let logger: LoggerProtocol
+    private let tokenStorage: TokenStorageProtocol
+    private weak var delegate: AuthFeatureDelegate?
+
+    public init(logger: LoggerProtocol,
+                tokenStorage: TokenStorageProtocol,
+                delegate: AuthFeatureDelegate?) {
+        self.logger = logger
+        self.tokenStorage = tokenStorage
+        self.delegate = delegate
+    }
+
+    // MARK: - AuthFeatureInterface
+
+    @MainActor
+    public func makeLoginView() -> AnyView {
+        // Build workers
+        let service: AuthServiceProtocol = FirebaseAuthService()
+        let repository: AuthRepositoryProtocol = AuthRepository(
+            service: service,
+            logger: logger
+        )
+        let useCase: LoginUseCaseProtocol = LoginUseCase(
+            repository: repository,
+            tokenStorage: tokenStorage
+        )
+
+        // Build VIP-S chain
+        let presenter = LoginPresenter()
+        let interactor = LoginInteractor(loginUseCase: useCase)
+        interactor.output = presenter
+        interactor.router = self
+
+        let view = LoginView(interactor: interactor, presenter: presenter)
+        return AnyView(view)
+    }
+
+    public var isAuthenticated: Bool {
+        get async {
+            tokenStorage.hasToken
+        }
+    }
+
+    // MARK: - LoginRouterDelegate
+
+    @MainActor
+    func loginDidComplete(route: AuthRoute) {
+        delegate?.authFeature(didComplete: route)
+    }
+}

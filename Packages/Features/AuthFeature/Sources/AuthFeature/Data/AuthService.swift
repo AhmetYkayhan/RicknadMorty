@@ -38,8 +38,9 @@ final class MockAuthService: AuthServiceProtocol {
         )
     )
 
+    init() {}
+
     func login(request: LoginRequestDTO) async throws -> LoginResponseDTO {
-        // Simulate network delay
         try await Task.sleep(nanoseconds: 500_000_000)
         return try loginResult.get()
     }
