@@ -1,5 +1,5 @@
-import Foundation
 import AppCore
+import Foundation
 
 // MARK: - Endpoint Protocol
 
@@ -13,10 +13,17 @@ public protocol Endpoint {
 }
 
 public extension Endpoint {
-    var baseURL: String { "https://api.ricknadmorty.com/v1" }
-    var headers: [String: String]? { ["Content-Type": "application/json"] }
-    var queryItems: [URLQueryItem]? { nil }
-    var body: Data? { nil }
+    var headers: [String: String]? {
+        ["Content-Type": "application/json"]
+    }
+
+    var queryItems: [URLQueryItem]? {
+        nil
+    }
+
+    var body: Data? {
+        nil
+    }
 }
 
 // MARK: - URL Construction

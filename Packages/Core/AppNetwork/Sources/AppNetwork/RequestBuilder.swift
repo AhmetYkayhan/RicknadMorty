@@ -1,5 +1,5 @@
-import Foundation
 import AppCore
+import Foundation
 
 // MARK: - Request Builder
 
@@ -11,12 +11,12 @@ public struct RequestBuilder {
     private var queryItems: [URLQueryItem]
     private var body: Data?
 
-    public init(baseURL: String = "https://api.ricknadmorty.com/v1") {
+    public init(baseURL: String) {
         self.baseURL = baseURL
-        self.path = ""
-        self.method = .get
-        self.headers = ["Content-Type": "application/json"]
-        self.queryItems = []
+        path = ""
+        method = .get
+        headers = ["Content-Type": "application/json"]
+        queryItems = []
     }
 
     public func setPath(_ path: String) -> RequestBuilder {
@@ -43,7 +43,7 @@ public struct RequestBuilder {
         return copy
     }
 
-    public func setBody<T: Encodable>(_ body: T) throws -> RequestBuilder {
+    public func setBody(_ body: some Encodable) throws -> RequestBuilder {
         var copy = self
         copy.body = try JSONEncoder().encode(body)
         return copy

@@ -1,14 +1,19 @@
-import SwiftUI
 import DesignSystem
 import HomeFeature
+import SwiftUI
 
-struct ProfileView: View {
+public struct ProfileView: View {
     let interactor: ProfileInteractor
     @Bindable var presenter: ProfilePresenter
 
     @Environment(\.favoritesStore) private var favoritesStore
 
-    var body: some View {
+    public init(interactor: ProfileInteractor, presenter: ProfilePresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         NavigationStack {
             List {
                 Section {

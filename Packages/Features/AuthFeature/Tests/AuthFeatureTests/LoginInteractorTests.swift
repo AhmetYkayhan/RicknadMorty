@@ -1,11 +1,10 @@
+import AuthFeatureInterface
 import Testing
 @testable import AuthFeature
-import AuthFeatureInterface
 
 @MainActor
 @Suite("LoginInteractor")
 struct LoginInteractorTests {
-
     final class StubUseCase: LoginUseCaseProtocol {
         var capturedEmail: String?
         var capturedPassword: String?
@@ -114,14 +113,14 @@ struct LoginInteractorTests {
     // MARK: - Helpers
 
     private func waitForLoginCompletion(presenter: LoginPresenter) async {
-        for _ in 0..<50 {
+        for _ in 0 ..< 50 {
             if presenter.state.isLoginSuccessful || presenter.state.errorMessage != nil { return }
             try? await Task.sleep(nanoseconds: 20_000_000)
         }
     }
 
     private func waitForLoginFailure(presenter: LoginPresenter) async {
-        for _ in 0..<50 {
+        for _ in 0 ..< 50 {
             if presenter.state.errorMessage != nil { return }
             try? await Task.sleep(nanoseconds: 20_000_000)
         }

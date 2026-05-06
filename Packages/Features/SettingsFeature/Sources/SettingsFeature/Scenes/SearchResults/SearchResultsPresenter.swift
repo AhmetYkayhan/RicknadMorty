@@ -1,6 +1,6 @@
+import AppCore
 import Foundation
 import Observation
-import AppCore
 
 @MainActor
 @Observable

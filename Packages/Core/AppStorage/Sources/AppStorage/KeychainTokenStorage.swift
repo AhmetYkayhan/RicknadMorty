@@ -1,5 +1,5 @@
-import Foundation
 import AppCore
+import Foundation
 import Security
 
 // MARK: - Keychain Token Storage
@@ -9,7 +9,8 @@ public final class KeychainTokenStorage: TokenStorageProtocol {
     private let account: String
 
     public init(service: String = "com.ricknadmorty.auth",
-                account: String = "accessToken") {
+                account: String = "accessToken")
+    {
         self.service = service
         self.account = account
     }
@@ -50,7 +51,8 @@ public final class KeychainTokenStorage: TokenStorageProtocol {
         switch status {
         case errSecSuccess:
             guard let data = result as? Data,
-                  let token = String(data: data, encoding: .utf8) else {
+                  let token = String(data: data, encoding: .utf8)
+            else {
                 throw StorageError.readFailed
             }
             return token

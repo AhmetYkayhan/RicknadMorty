@@ -4,7 +4,6 @@ import Testing
 @MainActor
 @Suite("LoginPresenter")
 struct LoginPresenterTests {
-
     @Test("loginLoading sets isLoading and clears error")
     func loginLoading() {
         let presenter = LoginPresenter()

@@ -3,7 +3,8 @@ import SwiftUI
 // MARK: - Settings Feature Interface (Stub)
 
 public protocol SettingsFeatureInterface {
-    @MainActor func makeSettingsView() -> AnyView
+    @MainActor
+    func makeSettingsView() -> AnyView
 }
 
 public enum SettingsRoute: Equatable {

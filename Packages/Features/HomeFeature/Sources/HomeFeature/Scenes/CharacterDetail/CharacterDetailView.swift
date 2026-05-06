@@ -1,11 +1,16 @@
-import SwiftUI
 import DesignSystem
+import SwiftUI
 
-struct CharacterDetailView: View {
+public struct CharacterDetailView: View {
     let interactor: CharacterDetailInteractor
     @Bindable var presenter: CharacterDetailPresenter
 
-    var body: some View {
+    public init(interactor: CharacterDetailInteractor, presenter: CharacterDetailPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         ScrollView {
             VStack(spacing: AppSpacing.md) {
                 if let character = presenter.viewState.character {
@@ -31,26 +36,26 @@ struct CharacterDetailView: View {
         }
         .navigationTitle(presenter.viewState.character?.name ?? "")
         #if os(iOS)
-        .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.large)
         #endif
-        .toolbar {
-            ToolbarItem(placement: toolbarTrailingPlacement) {
-                Button {
-                    interactor.handle(.toggleFavorite)
-                } label: {
-                    Image(systemName: presenter.viewState.isFavorite ? "heart.fill" : "heart")
-                        .foregroundColor(presenter.viewState.isFavorite ? .red : AppColors.secondaryLabel)
+            .toolbar {
+                ToolbarItem(placement: toolbarTrailingPlacement) {
+                    Button {
+                        interactor.handle(.toggleFavorite)
+                    } label: {
+                        Image(systemName: presenter.viewState.isFavorite ? "heart.fill" : "heart")
+                            .foregroundColor(presenter.viewState.isFavorite ? .red : AppColors.secondaryLabel)
+                    }
                 }
             }
-        }
-        .onAppear { interactor.handle(.onAppear) }
+            .onAppear { interactor.handle(.onAppear) }
     }
 
     private var toolbarTrailingPlacement: ToolbarItemPlacement {
         #if os(iOS)
-        .topBarTrailing
+            .topBarTrailing
         #else
-        .automatic
+            .automatic
         #endif
     }
 
@@ -72,9 +77,9 @@ struct CharacterDetailView: View {
 
     private func statusColor(for character: HomeEntity) -> Color {
         switch character.status {
-        case .alive: return AppColors.success
-        case .dead: return AppColors.destructive
-        case .unknown: return AppColors.warning
+        case .alive: AppColors.success
+        case .dead: AppColors.destructive
+        case .unknown: AppColors.warning
         }
     }
 }

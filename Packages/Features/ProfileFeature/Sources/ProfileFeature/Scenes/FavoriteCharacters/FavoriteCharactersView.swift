@@ -1,14 +1,19 @@
-import SwiftUI
 import DesignSystem
 import HomeFeature
+import SwiftUI
 
-struct FavoriteCharactersView: View {
+public struct FavoriteCharactersView: View {
     let interactor: FavoriteCharactersInteractor
     @Bindable var presenter: FavoriteCharactersPresenter
 
     @Environment(\.favoritesStore) private var favoritesStore
 
-    var body: some View {
+    public init(interactor: FavoriteCharactersInteractor, presenter: FavoriteCharactersPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         Group {
             if presenter.viewState.isEmpty {
                 ContentUnavailableView(
@@ -31,12 +36,12 @@ struct FavoriteCharactersView: View {
         }
         .navigationTitle("Favori Karakterlerim")
         #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         #endif
-        .onAppear { interactor.handle(.onAppear) }
-        .onChange(of: favoritesStore?.favorites.count ?? 0) { _, _ in
-            interactor.handle(.refresh)
-        }
+            .onAppear { interactor.handle(.onAppear) }
+            .onChange(of: favoritesStore?.favorites.count ?? 0) { _, _ in
+                interactor.handle(.refresh)
+            }
     }
 }
 
@@ -70,9 +75,9 @@ private struct FavoriteCharacterRow: View {
 
     private var statusColor: Color {
         switch character.status {
-        case .alive: return AppColors.success
-        case .dead: return AppColors.destructive
-        case .unknown: return AppColors.warning
+        case .alive: AppColors.success
+        case .dead: AppColors.destructive
+        case .unknown: AppColors.warning
         }
     }
 }

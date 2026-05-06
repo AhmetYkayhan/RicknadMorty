@@ -8,7 +8,9 @@ public enum SearchType: String, CaseIterable, Identifiable, Equatable, Hashable 
     case episode = "Episode"
     case location = "Location"
 
-    public var id: String { rawValue }
+    public var id: String {
+        rawValue
+    }
 }
 
 // MARK: - Episode Entity
@@ -52,9 +54,9 @@ public enum SearchResultEntity: Identifiable, Hashable {
 
     public var id: String {
         switch self {
-        case .character(let entity): return "character-\(entity.id)"
-        case .episode(let entity): return "episode-\(entity.id)"
-        case .location(let entity): return "location-\(entity.id)"
+        case let .character(entity): "character-\(entity.id)"
+        case let .episode(entity): "episode-\(entity.id)"
+        case let .location(entity): "location-\(entity.id)"
         }
     }
 }

@@ -8,7 +8,8 @@ public final class CharacterDetailInteractor {
 
     public init(character: HomeEntity,
                 favoritesStore: FavoritesStore,
-                presenter: CharacterDetailPresenter) {
+                presenter: CharacterDetailPresenter)
+    {
         self.character = character
         self.favoritesStore = favoritesStore
         self.presenter = presenter

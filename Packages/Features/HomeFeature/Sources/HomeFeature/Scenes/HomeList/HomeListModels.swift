@@ -1,8 +1,7 @@
-import Foundation
 import AppCore
+import Foundation
 
 public enum HomeList {
-
     public enum Request {
         case onAppear
         case refresh
@@ -20,7 +19,7 @@ public enum HomeList {
     public struct ViewState: ViewStateProtocol {
         public var characters: [HomeEntity] = []
         public var isLoading: Bool = false
-        public var errorMessage: String? = nil
+        public var errorMessage: String?
         public var hasMorePages: Bool = true
 
         public init() {}

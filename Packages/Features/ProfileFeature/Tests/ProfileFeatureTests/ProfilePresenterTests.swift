@@ -4,7 +4,6 @@ import Testing
 @MainActor
 @Suite("ProfilePresenter")
 struct ProfilePresenterTests {
-
     @Test("countUpdated sets count")
     func count() {
         let presenter = ProfilePresenter()

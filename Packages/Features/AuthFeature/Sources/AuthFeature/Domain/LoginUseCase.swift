@@ -1,5 +1,5 @@
-import Foundation
 import AppStorage
+import Foundation
 
 // MARK: - Login Use Case Protocol
 
@@ -14,7 +14,8 @@ public final class LoginUseCase: LoginUseCaseProtocol {
     private let tokenStorage: TokenStorageProtocol
 
     public init(repository: AuthRepositoryProtocol,
-                tokenStorage: TokenStorageProtocol) {
+                tokenStorage: TokenStorageProtocol)
+    {
         self.repository = repository
         self.tokenStorage = tokenStorage
     }

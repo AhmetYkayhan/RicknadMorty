@@ -1,11 +1,16 @@
-import SwiftUI
 import DesignSystem
+import SwiftUI
 
-struct SettingsView: View {
+public struct SettingsView: View {
     let interactor: SettingsInteractor
     @Bindable var presenter: SettingsPresenter
 
-    var body: some View {
+    public init(interactor: SettingsInteractor, presenter: SettingsPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         NavigationStack {
             List {
                 Section("Search") {
@@ -87,9 +92,9 @@ struct SettingsView: View {
 private struct NoCapitalizationModifier: ViewModifier {
     func body(content: Content) -> some View {
         #if os(iOS)
-        content.textInputAutocapitalization(.never)
+            content.textInputAutocapitalization(.never)
         #else
-        content
+            content
         #endif
     }
 }

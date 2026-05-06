@@ -1,8 +1,9 @@
-import SwiftUI
 import AppLogger
 import AppNetwork
+import SwiftUI
 
 // MARK: - SearchResults Scene Factory
+
 //
 // Pragmatic NavigationStack bridge — same shape as HomeFeature.CharacterDetailSceneFactory.
 // Faz 8'de Environment-based DI'a alınacak.
@@ -19,10 +20,8 @@ public final class SearchResultsSceneFactory {
         self.logger = logger
     }
 
-    static func make(params: Settings.SearchParams) -> AnyView {
-        guard let factory = shared else {
-            return AnyView(Text("SearchResults not configured"))
-        }
+    static func makeScene(params: Settings.SearchParams) -> SearchResultsView? {
+        guard let factory = shared else { return nil }
         let service: SearchServiceProtocol = SearchService(networkClient: factory.networkClient)
         let repository: SearchRepositoryProtocol = SearchRepository(service: service, logger: factory.logger)
         let useCase: SearchUseCaseProtocol = SearchUseCase(repository: repository)
@@ -33,6 +32,13 @@ public final class SearchResultsSceneFactory {
             presenter: presenter,
             params: params
         )
-        return AnyView(SearchResultsView(interactor: interactor, presenter: presenter))
+        return SearchResultsView(interactor: interactor, presenter: presenter)
+    }
+
+    static func make(params: Settings.SearchParams) -> AnyView {
+        if let scene = makeScene(params: params) {
+            return AnyView(scene)
+        }
+        return AnyView(Text("SearchResults not configured"))
     }
 }

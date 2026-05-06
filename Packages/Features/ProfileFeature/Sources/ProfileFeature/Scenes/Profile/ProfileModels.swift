@@ -1,7 +1,6 @@
 import Foundation
 
 public enum Profile {
-
     public enum Request {
         case onAppear
         case favoritesTapped

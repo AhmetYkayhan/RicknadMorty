@@ -1,11 +1,11 @@
-import SwiftUI
-import Observation
 import AuthFeatureInterface
 import HomeFeature
 import HomeFeatureInterface
+import Observation
 import ProfileFeature
 import ProfileFeatureInterface
 import SettingsFeatureInterface
+import SwiftUI
 
 // MARK: - App Coordinator
 
@@ -66,7 +66,7 @@ final class AppCoordinator {
 
     func logout() {
         // Capture the lazy auth feature before we clear cached references.
-        let authFeature = self.authFeature
+        let authFeature = authFeature
         Task { @MainActor in
             try? await authFeature.signOut()
             _authFeature = nil
@@ -122,7 +122,7 @@ extension AppCoordinator: AuthFeatureDelegate {
 extension AppCoordinator: HomeFeatureDelegate {
     func homeFeature(didSelect route: HomeRoute) {
         switch route {
-        case .characterDetail(let id):
+        case let .characterDetail(id):
             withAnimation {
                 currentRoute = .characterDetail(id: id)
             }

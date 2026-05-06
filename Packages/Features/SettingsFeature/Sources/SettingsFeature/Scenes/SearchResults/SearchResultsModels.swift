@@ -1,8 +1,7 @@
-import Foundation
 import AppCore
+import Foundation
 
 public enum SearchResults {
-
     public enum Request {
         case onAppear
         case retry
@@ -17,7 +16,7 @@ public enum SearchResults {
     public struct ViewState: ViewStateProtocol {
         public var results: [SearchResultEntity] = []
         public var isLoading: Bool = false
-        public var errorMessage: String? = nil
+        public var errorMessage: String?
         public var hasSearched: Bool = false
         public init() {}
     }

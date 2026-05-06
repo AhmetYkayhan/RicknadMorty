@@ -4,7 +4,8 @@ import SwiftUI
 
 /// Public protocol that other modules use to interact with HomeFeature
 public protocol HomeFeatureInterface {
-    @MainActor func makeHomeView() -> AnyView
+    @MainActor
+    func makeHomeView() -> AnyView
 }
 
 // MARK: - Home Feature Route

@@ -11,9 +11,10 @@ public struct AppTextField: View {
     public init(placeholder: String,
                 text: Binding<String>,
                 isSecure: Bool = false,
-                errorMessage: String? = nil) {
+                errorMessage: String? = nil)
+    {
         self.placeholder = placeholder
-        self._text = text
+        _text = text
         self.isSecure = isSecure
         self.errorMessage = errorMessage
     }
@@ -36,7 +37,7 @@ public struct AppTextField: View {
             )
             .autocorrectionDisabled()
             #if canImport(UIKit)
-            .textInputAutocapitalization(.never)
+                .textInputAutocapitalization(.never)
             #endif
 
             if let errorMessage {

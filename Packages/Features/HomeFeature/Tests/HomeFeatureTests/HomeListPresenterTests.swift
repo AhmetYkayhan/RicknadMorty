@@ -1,11 +1,10 @@
 import Testing
-@testable import HomeFeature
 @testable import AppCore
+@testable import HomeFeature
 
 @MainActor
 @Suite("HomeListPresenter")
 struct HomeListPresenterTests {
-
     @Test("loadingStarted sets loading and clears error")
     func loading() {
         let presenter = HomeListPresenter()
@@ -33,8 +32,26 @@ struct HomeListPresenterTests {
     @Test("pageLoaded with append=true grows characters")
     func pageLoadedAppend() {
         let presenter = HomeListPresenter()
-        let a = HomeEntity(id: 1, name: "Rick", status: .alive, species: "Human", gender: "Male", origin: "Earth", location: "Earth", imageURL: nil)
-        let b = HomeEntity(id: 2, name: "Morty", status: .alive, species: "Human", gender: "Male", origin: "Earth", location: "Earth", imageURL: nil)
+        let a = HomeEntity(
+            id: 1,
+            name: "Rick",
+            status: .alive,
+            species: "Human",
+            gender: "Male",
+            origin: "Earth",
+            location: "Earth",
+            imageURL: nil
+        )
+        let b = HomeEntity(
+            id: 2,
+            name: "Morty",
+            status: .alive,
+            species: "Human",
+            gender: "Male",
+            origin: "Earth",
+            location: "Earth",
+            imageURL: nil
+        )
 
         presenter.present(.pageLoaded(characters: [a], hasMore: true, append: false))
         presenter.present(.pageLoaded(characters: [b], hasMore: false, append: true))

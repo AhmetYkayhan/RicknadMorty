@@ -13,7 +13,8 @@ public struct HomeEntity: Codable, Equatable, Hashable, Identifiable {
     public let imageURL: URL?
 
     public init(id: Int, name: String, status: Status, species: String,
-                gender: String, origin: String, location: String, imageURL: URL?) {
+                gender: String, origin: String, location: String, imageURL: URL?)
+    {
         self.id = id
         self.name = name
         self.status = status
@@ -27,6 +28,6 @@ public struct HomeEntity: Codable, Equatable, Hashable, Identifiable {
     public enum Status: String, Codable, Equatable {
         case alive = "Alive"
         case dead = "Dead"
-        case unknown = "unknown"
+        case unknown
     }
 }

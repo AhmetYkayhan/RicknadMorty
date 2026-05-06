@@ -19,7 +19,7 @@ public struct EpisodeDetailView: View {
         }
         .navigationTitle(episode.name)
         #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         #endif
     }
 }

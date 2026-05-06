@@ -6,7 +6,8 @@ import SwiftUI
 /// Feature modules never import each other directly — they depend on interfaces.
 public protocol AuthFeatureInterface {
     /// Creates the login view to be composed by the coordinator
-    @MainActor func makeLoginView() -> AnyView
+    @MainActor
+    func makeLoginView() -> AnyView
 
     /// Current authentication status (token-backed)
     var isAuthenticated: Bool { get async }

@@ -17,7 +17,8 @@ public struct AppButton: View {
     public init(title: String,
                 style: Style = .primary,
                 isLoading: Bool = false,
-                action: @escaping () -> Void) {
+                action: @escaping () -> Void)
+    {
         self.title = title
         self.style = style
         self.isLoading = isLoading
@@ -45,17 +46,17 @@ public struct AppButton: View {
 
     private var backgroundColor: Color {
         switch style {
-        case .primary: return AppColors.accent
-        case .secondary: return AppColors.secondaryBackground
-        case .destructive: return AppColors.destructive
+        case .primary: AppColors.accent
+        case .secondary: AppColors.secondaryBackground
+        case .destructive: AppColors.destructive
         }
     }
 
     private var foregroundColor: Color {
         switch style {
-        case .primary: return .white
-        case .secondary: return AppColors.label
-        case .destructive: return .white
+        case .primary: .white
+        case .secondary: AppColors.label
+        case .destructive: .white
         }
     }
 }

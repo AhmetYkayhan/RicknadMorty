@@ -17,23 +17,25 @@ public enum AppError: AppErrorProtocol {
 
     public var code: Int {
         switch self {
-        case .network(let error): return error.code
-        case .storage(let error): return error.code
-        case .auth(let error): return error.code
-        case .unknown: return -1
+        case let .network(error): error.code
+        case let .storage(error): error.code
+        case let .auth(error): error.code
+        case .unknown: -1
         }
     }
 
     public var userMessage: String {
         switch self {
-        case .network(let error): return error.userMessage
-        case .storage(let error): return error.userMessage
-        case .auth(let error): return error.userMessage
-        case .unknown(let message): return message
+        case let .network(error): error.userMessage
+        case let .storage(error): error.userMessage
+        case let .auth(error): error.userMessage
+        case let .unknown(message): message
         }
     }
 
-    public var errorDescription: String? { userMessage }
+    public var errorDescription: String? {
+        userMessage
+    }
 }
 
 // MARK: - Network Errors
@@ -50,31 +52,33 @@ public enum NetworkError: AppErrorProtocol {
 
     public var code: Int {
         switch self {
-        case .invalidURL: return 1001
-        case .noData: return 1002
-        case .decodingFailed: return 1003
-        case .unauthorized: return 1004
-        case .serverError(let statusCode): return statusCode
-        case .timeout: return 1005
-        case .noConnection: return 1006
-        case .unknown: return 1099
+        case .invalidURL: 1001
+        case .noData: 1002
+        case .decodingFailed: 1003
+        case .unauthorized: 1004
+        case let .serverError(statusCode): statusCode
+        case .timeout: 1005
+        case .noConnection: 1006
+        case .unknown: 1099
         }
     }
 
     public var userMessage: String {
         switch self {
-        case .invalidURL: return "Invalid URL."
-        case .noData: return "No data received."
-        case .decodingFailed: return "Failed to process response."
-        case .unauthorized: return "Session expired. Please login again."
-        case .serverError: return "Server error. Please try again later."
-        case .timeout: return "Request timed out."
-        case .noConnection: return "No internet connection."
-        case .unknown(let msg): return msg
+        case .invalidURL: "Invalid URL."
+        case .noData: "No data received."
+        case .decodingFailed: "Failed to process response."
+        case .unauthorized: "Session expired. Please login again."
+        case .serverError: "Server error. Please try again later."
+        case .timeout: "Request timed out."
+        case .noConnection: "No internet connection."
+        case let .unknown(msg): msg
         }
     }
 
-    public var errorDescription: String? { userMessage }
+    public var errorDescription: String? {
+        userMessage
+    }
 }
 
 // MARK: - Storage Errors
@@ -87,23 +91,25 @@ public enum StorageError: AppErrorProtocol {
 
     public var code: Int {
         switch self {
-        case .saveFailed: return 2001
-        case .readFailed: return 2002
-        case .deleteFailed: return 2003
-        case .notFound: return 2004
+        case .saveFailed: 2001
+        case .readFailed: 2002
+        case .deleteFailed: 2003
+        case .notFound: 2004
         }
     }
 
     public var userMessage: String {
         switch self {
-        case .saveFailed: return "Failed to save data."
-        case .readFailed: return "Failed to read data."
-        case .deleteFailed: return "Failed to delete data."
-        case .notFound: return "Data not found."
+        case .saveFailed: "Failed to save data."
+        case .readFailed: "Failed to read data."
+        case .deleteFailed: "Failed to delete data."
+        case .notFound: "Data not found."
         }
     }
 
-    public var errorDescription: String? { userMessage }
+    public var errorDescription: String? {
+        userMessage
+    }
 }
 
 // MARK: - Auth Errors
@@ -116,21 +122,23 @@ public enum AuthError: AppErrorProtocol {
 
     public var code: Int {
         switch self {
-        case .invalidCredentials: return 3001
-        case .tokenExpired: return 3002
-        case .accountLocked: return 3003
-        case .registrationFailed: return 3004
+        case .invalidCredentials: 3001
+        case .tokenExpired: 3002
+        case .accountLocked: 3003
+        case .registrationFailed: 3004
         }
     }
 
     public var userMessage: String {
         switch self {
-        case .invalidCredentials: return "Invalid email or password."
-        case .tokenExpired: return "Session expired. Please login again."
-        case .accountLocked: return "Account is locked. Contact support."
-        case .registrationFailed: return "Registration failed. Try again."
+        case .invalidCredentials: "Invalid email or password."
+        case .tokenExpired: "Session expired. Please login again."
+        case .accountLocked: "Account is locked. Contact support."
+        case .registrationFailed: "Registration failed. Try again."
         }
     }
 
-    public var errorDescription: String? { userMessage }
+    public var errorDescription: String? {
+        userMessage
+    }
 }

@@ -8,17 +8,17 @@ public enum AppColors {
 
     // Fallback semantic colors
     #if canImport(UIKit)
-    public static let background = Color(.systemBackground)
-    public static let secondaryBackground = Color(.secondarySystemBackground)
-    public static let label = Color(.label)
-    public static let secondaryLabel = Color(.secondaryLabel)
-    public static let separator = Color(.separator)
+        public static let background = Color(.systemBackground)
+        public static let secondaryBackground = Color(.secondarySystemBackground)
+        public static let label = Color(.label)
+        public static let secondaryLabel = Color(.secondaryLabel)
+        public static let separator = Color(.separator)
     #else
-    public static let background = Color(nsColor: .windowBackgroundColor)
-    public static let secondaryBackground = Color(nsColor: .controlBackgroundColor)
-    public static let label = Color(nsColor: .labelColor)
-    public static let secondaryLabel = Color(nsColor: .secondaryLabelColor)
-    public static let separator = Color(nsColor: .separatorColor)
+        public static let background = Color(nsColor: .windowBackgroundColor)
+        public static let secondaryBackground = Color(nsColor: .controlBackgroundColor)
+        public static let label = Color(nsColor: .labelColor)
+        public static let secondaryLabel = Color(nsColor: .secondaryLabelColor)
+        public static let separator = Color(nsColor: .separatorColor)
     #endif
 
     public static let destructive = Color.red

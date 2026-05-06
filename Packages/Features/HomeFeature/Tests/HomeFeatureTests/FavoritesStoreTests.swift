@@ -4,7 +4,6 @@ import Testing
 @MainActor
 @Suite("FavoritesStore")
 struct FavoritesStoreTests {
-
     @Test("toggle adds and removes")
     func toggle() {
         let store = FavoritesStore()

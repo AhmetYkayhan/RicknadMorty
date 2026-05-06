@@ -1,6 +1,6 @@
-import Foundation
 import AppCore
 import AppLogger
+import Foundation
 
 // MARK: - Network Client
 
@@ -11,7 +11,8 @@ public final class NetworkClient: NetworkClientProtocol {
 
     public init(session: URLSession = .shared,
                 decoder: JSONDecoder = JSONDecoder(),
-                logger: LoggerProtocol) {
+                logger: LoggerProtocol)
+    {
         self.session = session
         self.decoder = decoder
         self.logger = logger
@@ -62,13 +63,13 @@ public final class NetworkClient: NetworkClientProtocol {
         logger.debug("Response status: \(httpResponse.statusCode)")
 
         switch httpResponse.statusCode {
-        case 200...299:
+        case 200 ... 299:
             return data
         case 401:
             throw NetworkError.unauthorized
-        case 400...499:
+        case 400 ... 499:
             throw NetworkError.serverError(statusCode: httpResponse.statusCode)
-        case 500...599:
+        case 500 ... 599:
             throw NetworkError.serverError(statusCode: httpResponse.statusCode)
         default:
             throw NetworkError.unknown("Unexpected status code: \(httpResponse.statusCode)")

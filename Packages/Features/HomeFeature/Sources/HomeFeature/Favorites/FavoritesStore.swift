@@ -1,6 +1,6 @@
 import Foundation
-import SwiftUI
 import Observation
+import SwiftUI
 
 // MARK: - Favorites Store Environment Key
 
@@ -45,7 +45,8 @@ public final class FavoritesStore {
 
     private func load() {
         guard let data = UserDefaults.standard.data(forKey: Self.key),
-              let decoded = try? JSONDecoder().decode([HomeEntity].self, from: data) else {
+              let decoded = try? JSONDecoder().decode([HomeEntity].self, from: data)
+        else {
             return
         }
         favorites = decoded

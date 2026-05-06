@@ -1,9 +1,9 @@
-import Foundation
 import AppLogger
-import AppStorage
 import AppNetwork
-import AuthFeatureInterface
+import AppStorage
 import AuthFeature
+import AuthFeatureInterface
+import Foundation
 import HomeFeature
 import HomeFeatureInterface
 import ProfileFeature
@@ -17,7 +17,6 @@ import SettingsFeatureInterface
 /// This is the composition root — the only place that knows about concrete types.
 @MainActor
 final class AppDependencyContainer {
-
     // MARK: - Core Dependencies
 
     private lazy var logger: LoggerProtocol = AppLogger(category: "app")
@@ -26,7 +25,7 @@ final class AppDependencyContainer {
 
     // MARK: - Shared Stores
 
-    lazy var favoritesStore: FavoritesStore = FavoritesStore()
+    lazy var favoritesStore: FavoritesStore = .init()
 
     // MARK: - Auth Feature
 

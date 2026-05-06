@@ -1,7 +1,6 @@
 import Foundation
 
 public enum CharacterDetail {
-
     public enum Request {
         case onAppear
         case toggleFavorite

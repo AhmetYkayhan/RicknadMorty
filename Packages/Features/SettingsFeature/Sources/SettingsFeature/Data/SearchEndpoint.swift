@@ -1,5 +1,5 @@
-import Foundation
 import AppNetwork
+import Foundation
 
 // MARK: - Search Endpoints (Rick and Morty API)
 
@@ -8,24 +8,28 @@ enum SearchEndpoint: Endpoint {
     case episodes(name: String)
     case locations(name: String)
 
-    var baseURL: String { "https://rickandmortyapi.com/api" }
+    var baseURL: String {
+        "https://rickandmortyapi.com/api"
+    }
 
     var path: String {
         switch self {
-        case .characters: return "/character"
-        case .episodes: return "/episode"
-        case .locations: return "/location"
+        case .characters: "/character"
+        case .episodes: "/episode"
+        case .locations: "/location"
         }
     }
 
-    var method: HTTPMethod { .get }
+    var method: HTTPMethod {
+        .get
+    }
 
     var queryItems: [URLQueryItem]? {
         switch self {
-        case .characters(let name),
-             .episodes(let name),
-             .locations(let name):
-            return [URLQueryItem(name: "name", value: name)]
+        case let .characters(name),
+             let .episodes(name),
+             let .locations(name):
+            [URLQueryItem(name: "name", value: name)]
         }
     }
 }

@@ -3,7 +3,6 @@ import Foundation
 // MARK: - Login Models (VIP-S)
 
 public enum Login {
-
     // MARK: - Request (View -> Interactor)
 
     public enum Request {
@@ -28,12 +27,12 @@ public enum Login {
         public var email: String = ""
         public var password: String = ""
         public var isLoading: Bool = false
-        public var errorMessage: String? = nil
+        public var errorMessage: String?
         public var isLoginSuccessful: Bool = false
 
         public var isFormValid: Bool {
             !email.trimmingCharacters(in: .whitespaces).isEmpty &&
-            password.count >= 6
+                password.count >= 6
         }
 
         public var emailError: String? {

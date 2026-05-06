@@ -1,5 +1,5 @@
-import SwiftUI
 import DesignSystem
+import SwiftUI
 
 // MARK: - Login View
 
@@ -55,9 +55,9 @@ public struct LoginView: View {
             errorMessage: presenter.state.emailError
         )
         #if os(iOS)
-        field.keyboardType(.emailAddress)
+            field.keyboardType(.emailAddress)
         #else
-        field
+            field
         #endif
     }
 

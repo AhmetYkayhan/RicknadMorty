@@ -1,12 +1,11 @@
 import Testing
-@testable import SettingsFeature
 @testable import AppCore
 @testable import HomeFeature
+@testable import SettingsFeature
 
 @MainActor
 @Suite("SearchResultsInteractor")
 struct SearchResultsInteractorTests {
-
     final class StubUseCase: SearchUseCaseProtocol {
         var result: Result<[SearchResultEntity], Error>
         var calls: [(SearchType, String)] = []
@@ -18,8 +17,8 @@ struct SearchResultsInteractorTests {
         func execute(type: SearchType, query: String) async throws -> [SearchResultEntity] {
             calls.append((type, query))
             switch result {
-            case .success(let items): return items
-            case .failure(let error): throw error
+            case let .success(items): return items
+            case let .failure(error): throw error
             }
         }
     }

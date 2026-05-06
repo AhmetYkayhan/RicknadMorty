@@ -36,11 +36,13 @@ public final class AppLogger: LoggerProtocol {
 
     public init(subsystem: String = Bundle.main.bundleIdentifier ?? "com.ricknadmorty",
                 category: String = "general",
-                isEnabled: Bool = true) {
-        self.logger = os.Logger(subsystem: subsystem, category: category)
+                isEnabled: Bool = true)
+    {
+        logger = os.Logger(subsystem: subsystem, category: category)
         self.isEnabled = isEnabled
     }
 
+    // swiftformat:disable redundantSelf
     public func debug(_ message: String, file: String, function: String, line: Int) {
         guard isEnabled else { return }
         logger.debug("[\(self.fileName(file)):\(line)] \(message)")
@@ -53,13 +55,15 @@ public final class AppLogger: LoggerProtocol {
 
     public func warning(_ message: String, file: String, function: String, line: Int) {
         guard isEnabled else { return }
-        logger.warning("⚠️ [\(self.fileName(file)):\(line)] \(message)")
+        logger.warning("[\(self.fileName(file)):\(line)] \(message)")
     }
 
     public func error(_ message: String, file: String, function: String, line: Int) {
         guard isEnabled else { return }
-        logger.error("❌ [\(self.fileName(file)):\(line)] \(message)")
+        logger.error("[\(self.fileName(file)):\(line)] \(message)")
     }
+
+    // swiftformat:enable redundantSelf
 
     private func fileName(_ path: String) -> String {
         (path as NSString).lastPathComponent

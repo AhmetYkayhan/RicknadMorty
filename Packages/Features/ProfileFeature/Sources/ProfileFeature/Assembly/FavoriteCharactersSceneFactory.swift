@@ -1,5 +1,5 @@
-import SwiftUI
 import HomeFeature
+import SwiftUI
 
 @MainActor
 public final class FavoriteCharactersSceneFactory {
@@ -11,15 +11,20 @@ public final class FavoriteCharactersSceneFactory {
         self.favoritesStore = favoritesStore
     }
 
-    static func make() -> AnyView {
-        guard let factory = shared else {
-            return AnyView(Text("FavoriteCharacters not configured"))
-        }
+    static func makeScene() -> FavoriteCharactersView? {
+        guard let factory = shared else { return nil }
         let presenter = FavoriteCharactersPresenter()
         let interactor = FavoriteCharactersInteractor(
             favoritesStore: factory.favoritesStore,
             presenter: presenter
         )
-        return AnyView(FavoriteCharactersView(interactor: interactor, presenter: presenter))
+        return FavoriteCharactersView(interactor: interactor, presenter: presenter)
+    }
+
+    static func make() -> AnyView {
+        if let scene = makeScene() {
+            return AnyView(scene)
+        }
+        return AnyView(Text("FavoriteCharacters not configured"))
     }
 }

@@ -1,5 +1,5 @@
-import Foundation
 import AppCore
+import Foundation
 
 @MainActor
 public final class SearchResultsInteractor {
@@ -11,7 +11,8 @@ public final class SearchResultsInteractor {
 
     public init(useCase: SearchUseCaseProtocol,
                 presenter: SearchResultsPresenter,
-                params: Settings.SearchParams) {
+                params: Settings.SearchParams)
+    {
         self.useCase = useCase
         self.presenter = presenter
         self.params = params
@@ -34,15 +35,15 @@ public final class SearchResultsInteractor {
         currentTask = Task { [weak self] in
             guard let self else { return }
             do {
-                let items = try await self.useCase.execute(type: self.params.type, query: self.params.query)
+                let items = try await useCase.execute(type: params.type, query: params.query)
                 if Task.isCancelled { return }
-                self.presenter.present(.loaded(items))
+                presenter.present(.loaded(items))
             } catch let error as any AppErrorProtocol {
                 if Task.isCancelled { return }
                 self.presenter.present(.failed(error: error))
             } catch {
                 if Task.isCancelled { return }
-                self.presenter.present(.failed(error: WrappedError(underlying: error)))
+                presenter.present(.failed(error: WrappedError(underlying: error)))
             }
         }
     }
@@ -50,6 +51,11 @@ public final class SearchResultsInteractor {
 
 private struct WrappedError: AppErrorProtocol {
     let underlying: Error
-    var code: Int { -1 }
-    var userMessage: String { underlying.localizedDescription }
+    var code: Int {
+        -1
+    }
+
+    var userMessage: String {
+        underlying.localizedDescription
+    }
 }

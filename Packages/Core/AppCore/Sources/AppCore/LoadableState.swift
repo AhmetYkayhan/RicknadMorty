@@ -14,12 +14,12 @@ public enum LoadableState<T: Equatable>: Equatable {
     }
 
     public var value: T? {
-        if case .loaded(let data) = self { return data }
+        if case let .loaded(data) = self { return data }
         return nil
     }
 
     public var errorMessage: String? {
-        if case .failed(let message) = self { return message }
+        if case let .failed(message) = self { return message }
         return nil
     }
 }

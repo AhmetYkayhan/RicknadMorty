@@ -7,7 +7,8 @@ public final class ProfileInteractor {
     private let presenter: ProfilePresenter
 
     public init(favoritesStore: FavoritesStore,
-                presenter: ProfilePresenter) {
+                presenter: ProfilePresenter)
+    {
         self.favoritesStore = favoritesStore
         self.presenter = presenter
     }

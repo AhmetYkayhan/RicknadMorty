@@ -5,10 +5,11 @@ import Testing
 @MainActor
 @Suite("SettingsInteractor")
 struct SettingsInteractorTests {
-
     final class SpyDelegate: SettingsFeatureDelegate {
         var route: SettingsRoute?
-        func settingsFeature(didSelect route: SettingsRoute) { self.route = route }
+        func settingsFeature(didSelect route: SettingsRoute) {
+            self.route = route
+        }
     }
 
     @Test("submit with empty query is no-op")
@@ -64,7 +65,7 @@ struct SettingsInteractorTests {
         sut.handle(.updateQuery("rick"))
         sut.handle(.clearQuery)
 
-        #expect(presenter.viewState.query == "")
+        #expect(presenter.viewState.query.isEmpty)
     }
 
     @Test("logoutTapped routes via delegate")

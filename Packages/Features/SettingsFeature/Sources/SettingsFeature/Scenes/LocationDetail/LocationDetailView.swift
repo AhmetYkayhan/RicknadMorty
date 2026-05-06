@@ -19,7 +19,7 @@ public struct LocationDetailView: View {
         }
         .navigationTitle(location.name)
         #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         #endif
     }
 }

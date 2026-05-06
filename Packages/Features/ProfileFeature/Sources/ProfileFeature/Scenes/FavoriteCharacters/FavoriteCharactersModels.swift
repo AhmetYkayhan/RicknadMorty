@@ -2,7 +2,6 @@ import Foundation
 import HomeFeature
 
 public enum FavoriteCharacters {
-
     public enum Request {
         case onAppear
         case refresh
@@ -14,7 +13,10 @@ public enum FavoriteCharacters {
 
     public struct ViewState {
         public var characters: [HomeEntity] = []
-        public var isEmpty: Bool { characters.isEmpty }
+        public var isEmpty: Bool {
+            characters.isEmpty
+        }
+
         public init() {}
     }
 }

@@ -1,5 +1,5 @@
-import Foundation
 import AppCore
+import Foundation
 import HomeFeatureInterface
 
 @MainActor
@@ -14,7 +14,8 @@ public final class HomeListInteractor {
 
     public init(useCase: GetHomeUseCaseProtocol,
                 presenter: HomeListPresenter,
-                delegate: HomeFeatureDelegate?) {
+                delegate: HomeFeatureDelegate?)
+    {
         self.useCase = useCase
         self.presenter = presenter
         self.delegate = delegate
@@ -73,6 +74,11 @@ public final class HomeListInteractor {
 
 private struct WrappedError: AppErrorProtocol {
     let underlying: Error
-    var code: Int { -1 }
-    var userMessage: String { underlying.localizedDescription }
+    var code: Int {
+        -1
+    }
+
+    var userMessage: String {
+        underlying.localizedDescription
+    }
 }

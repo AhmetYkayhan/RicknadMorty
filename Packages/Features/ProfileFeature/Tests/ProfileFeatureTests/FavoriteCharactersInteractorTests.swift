@@ -1,11 +1,10 @@
 import Testing
-@testable import ProfileFeature
 @testable import HomeFeature
+@testable import ProfileFeature
 
 @MainActor
 @Suite("FavoriteCharactersInteractor")
 struct FavoriteCharactersInteractorTests {
-
     @Test("onAppear loads from FavoritesStore")
     func onAppear() {
         let store = FavoritesStore()

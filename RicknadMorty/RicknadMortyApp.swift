@@ -1,16 +1,8 @@
-//
-//  RicknadMortyApp.swift
-//  RicknadMorty
-//
-//  Created by Yasin Kayhan on 27.04.2026.
-//
-
-import SwiftUI
 import FirebaseCore
+import SwiftUI
 
 @main
 struct RicknadMortyApp: App {
-
     init() {
         FirebaseApp.configure()
     }

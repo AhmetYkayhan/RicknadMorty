@@ -1,13 +1,12 @@
-import SwiftUI
 import AppCore
 import AppLogger
 import AppNetwork
 import HomeFeatureInterface
+import SwiftUI
 
 // MARK: - Home Feature Assembly
 
 public final class HomeFeatureAssembly: HomeFeatureInterface {
-
     private let networkClient: NetworkClientProtocol
     private let logger: LoggerProtocol
     private let favoritesStore: FavoritesStore
@@ -16,15 +15,18 @@ public final class HomeFeatureAssembly: HomeFeatureInterface {
     public init(networkClient: NetworkClientProtocol,
                 logger: LoggerProtocol,
                 favoritesStore: FavoritesStore,
-                delegate: HomeFeatureDelegate?) {
+                delegate: HomeFeatureDelegate?)
+    {
         self.networkClient = networkClient
         self.logger = logger
         self.favoritesStore = favoritesStore
         self.delegate = delegate
     }
 
+    // MARK: - Concrete Scene Factory
+
     @MainActor
-    public func makeHomeView() -> AnyView {
+    public func makeHomeScene() -> HomeListView {
         let service: HomeServiceProtocol = HomeService(networkClient: networkClient)
         let repository: HomeRepositoryProtocol = HomeRepository(service: service, logger: logger)
         let useCase: GetHomeUseCaseProtocol = GetHomeUseCase(repository: repository)
@@ -36,11 +38,16 @@ public final class HomeFeatureAssembly: HomeFeatureInterface {
             delegate: delegate
         )
 
-        // Set up the detail scene factory so HomeListView can create detail screens
-        // from NavigationStack's navigationDestination closure.
         CharacterDetailSceneFactory.shared = CharacterDetailSceneFactory(favoritesStore: favoritesStore)
 
-        return AnyView(HomeListView(interactor: interactor, presenter: presenter))
+        return HomeListView(interactor: interactor, presenter: presenter)
+    }
+
+    // MARK: - HomeFeatureInterface
+
+    @MainActor
+    public func makeHomeView() -> AnyView {
+        AnyView(makeHomeScene())
     }
 }
 
@@ -56,16 +63,21 @@ public final class CharacterDetailSceneFactory {
         self.favoritesStore = favoritesStore
     }
 
-    public static func make(character: HomeEntity) -> AnyView {
-        guard let factory = shared else {
-            return AnyView(Text("CharacterDetail not configured"))
-        }
+    public static func makeScene(character: HomeEntity) -> CharacterDetailView? {
+        guard let factory = shared else { return nil }
         let presenter = CharacterDetailPresenter()
         let interactor = CharacterDetailInteractor(
             character: character,
             favoritesStore: factory.favoritesStore,
             presenter: presenter
         )
-        return AnyView(CharacterDetailView(interactor: interactor, presenter: presenter))
+        return CharacterDetailView(interactor: interactor, presenter: presenter)
+    }
+
+    public static func make(character: HomeEntity) -> AnyView {
+        if let scene = makeScene(character: character) {
+            return AnyView(scene)
+        }
+        return AnyView(Text("CharacterDetail not configured"))
     }
 }

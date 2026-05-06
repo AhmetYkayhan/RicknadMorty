@@ -1,5 +1,5 @@
-import Foundation
 import AppLogger
+import Foundation
 
 // MARK: - Auth Repository (Data layer implementation)
 

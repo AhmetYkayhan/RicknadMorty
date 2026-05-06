@@ -7,7 +7,8 @@ public final class FavoriteCharactersInteractor {
     private let presenter: FavoriteCharactersPresenter
 
     public init(favoritesStore: FavoritesStore,
-                presenter: FavoriteCharactersPresenter) {
+                presenter: FavoriteCharactersPresenter)
+    {
         self.favoritesStore = favoritesStore
         self.presenter = presenter
     }

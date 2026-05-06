@@ -1,11 +1,16 @@
-import SwiftUI
 import DesignSystem
+import SwiftUI
 
-struct HomeListView: View {
+public struct HomeListView: View {
     let interactor: HomeListInteractor
     @Bindable var presenter: HomeListPresenter
 
-    var body: some View {
+    public init(interactor: HomeListInteractor, presenter: HomeListPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         NavigationStack {
             content
                 .navigationTitle("Characters")
@@ -17,10 +22,12 @@ struct HomeListView: View {
     @ViewBuilder
     private var content: some View {
         if let error = presenter.viewState.errorMessage,
-           presenter.viewState.characters.isEmpty {
+           presenter.viewState.characters.isEmpty
+        {
             ErrorView(message: error) { interactor.handle(.refresh) }
         } else if presenter.viewState.isLoading,
-                  presenter.viewState.characters.isEmpty {
+                  presenter.viewState.characters.isEmpty
+        {
             LoadingView(message: "Loading characters...")
         } else {
             characterList
@@ -82,9 +89,9 @@ struct CharacterRowView: View {
 
     private var statusColor: Color {
         switch character.status {
-        case .alive: return AppColors.success
-        case .dead: return AppColors.destructive
-        case .unknown: return AppColors.warning
+        case .alive: AppColors.success
+        case .dead: AppColors.destructive
+        case .unknown: AppColors.warning
         }
     }
 }

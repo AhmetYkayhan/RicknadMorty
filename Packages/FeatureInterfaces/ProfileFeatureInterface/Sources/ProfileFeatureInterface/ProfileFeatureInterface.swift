@@ -3,7 +3,8 @@ import SwiftUI
 // MARK: - Profile Feature Interface (Stub)
 
 public protocol ProfileFeatureInterface {
-    @MainActor func makeProfileView() -> AnyView
+    @MainActor
+    func makeProfileView() -> AnyView
 }
 
 public enum ProfileRoute: Equatable {

@@ -1,11 +1,10 @@
 import Testing
-@testable import SettingsFeature
 @testable import AppCore
+@testable import SettingsFeature
 
 @MainActor
 @Suite("SearchResultsPresenter")
 struct SearchResultsPresenterTests {
-
     @Test("loadingStarted sets loading and marks hasSearched")
     func loadingStarted() {
         let presenter = SearchResultsPresenter()

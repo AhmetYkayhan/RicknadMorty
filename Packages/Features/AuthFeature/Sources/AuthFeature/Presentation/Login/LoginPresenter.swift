@@ -1,6 +1,6 @@
+import AppCore
 import Foundation
 import Observation
-import AppCore
 
 // MARK: - Login Presenter
 
@@ -21,12 +21,12 @@ public final class LoginPresenter: LoginInteractorOutput {
             state.isLoading = false
             state.isLoginSuccessful = true
 
-        case .loginFailure(let error):
+        case let .loginFailure(error):
             state.isLoading = false
             state.errorMessage = (error as? any AppErrorProtocol)?.userMessage
                 ?? error.localizedDescription
 
-        case .fieldUpdate(let email, let password):
+        case let .fieldUpdate(email, password):
             state.email = email
             state.password = password
             state.errorMessage = nil

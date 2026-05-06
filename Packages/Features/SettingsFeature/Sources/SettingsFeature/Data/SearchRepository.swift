@@ -1,5 +1,5 @@
-import Foundation
 import AppLogger
+import Foundation
 import HomeFeature
 
 // MARK: - Search Repository (Data layer implementation)

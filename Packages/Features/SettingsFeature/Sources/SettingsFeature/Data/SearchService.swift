@@ -1,6 +1,6 @@
-import Foundation
 import AppCore
 import AppNetwork
+import Foundation
 import HomeFeature
 
 // MARK: - Search Service Protocol
@@ -55,7 +55,7 @@ final class SearchService: SearchServiceProtocol {
 
     /// Rick and Morty API responds with 404 when no results match. Treat that as empty list.
     private func mapEmptyOrThrow<T>(_ error: NetworkError) throws -> [T] {
-        if case .serverError(let status) = error, status == 404 {
+        if case let .serverError(status) = error, status == 404 {
             return []
         }
         throw error

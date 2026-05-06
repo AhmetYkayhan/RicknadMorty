@@ -1,11 +1,10 @@
-import Foundation
-import FirebaseAuth
 import AppCore
+import FirebaseAuth
+import Foundation
 
 // MARK: - Firebase Auth Service
 
 final class FirebaseAuthService: AuthServiceProtocol {
-
     func login(request: LoginRequestDTO) async throws -> LoginResponseDTO {
         let result: AuthDataResult
         do {

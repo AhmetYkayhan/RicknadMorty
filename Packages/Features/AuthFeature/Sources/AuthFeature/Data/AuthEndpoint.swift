@@ -1,5 +1,5 @@
-import Foundation
 import AppNetwork
+import Foundation
 
 // MARK: - Auth Endpoints
 
@@ -7,26 +7,30 @@ enum AuthEndpoint: Endpoint {
     case login(LoginRequestDTO)
     case logout
 
+    var baseURL: String {
+        "https://api.ricknadmorty.com/v1"
+    }
+
     var path: String {
         switch self {
-        case .login: return "/auth/login"
-        case .logout: return "/auth/logout"
+        case .login: "/auth/login"
+        case .logout: "/auth/logout"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .login: return .post
-        case .logout: return .post
+        case .login: .post
+        case .logout: .post
         }
     }
 
     var body: Data? {
         switch self {
-        case .login(let dto):
-            return try? JSONEncoder().encode(dto)
+        case let .login(dto):
+            try? JSONEncoder().encode(dto)
         case .logout:
-            return nil
+            nil
         }
     }
 }

@@ -1,19 +1,25 @@
-import SwiftUI
 import DesignSystem
 import HomeFeature
+import SwiftUI
 
-struct SearchResultsView: View {
+public struct SearchResultsView: View {
     let interactor: SearchResultsInteractor
     @Bindable var presenter: SearchResultsPresenter
 
-    var body: some View {
+    public init(interactor: SearchResultsInteractor, presenter: SearchResultsPresenter) {
+        self.interactor = interactor
+        self.presenter = presenter
+    }
+
+    public var body: some View {
         Group {
-            if presenter.viewState.isLoading && presenter.viewState.results.isEmpty {
+            if presenter.viewState.isLoading, presenter.viewState.results.isEmpty {
                 LoadingView(message: "Searching...")
             } else if let error = presenter.viewState.errorMessage,
-                      presenter.viewState.results.isEmpty {
+                      presenter.viewState.results.isEmpty
+            {
                 ErrorView(message: error) { interactor.handle(.retry) }
-            } else if presenter.viewState.hasSearched && presenter.viewState.results.isEmpty {
+            } else if presenter.viewState.hasSearched, presenter.viewState.results.isEmpty {
                 ContentUnavailableView(
                     "Sonuç bulunamadı",
                     systemImage: "magnifyingglass",
@@ -25,12 +31,12 @@ struct SearchResultsView: View {
         }
         .navigationTitle("Results")
         #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         #endif
-        .navigationDestination(for: SearchResultEntity.self) { result in
-            destinationView(for: result)
-        }
-        .onAppear { interactor.handle(.onAppear) }
+            .navigationDestination(for: SearchResultEntity.self) { result in
+                destinationView(for: result)
+            }
+            .onAppear { interactor.handle(.onAppear) }
     }
 
     private var resultsList: some View {

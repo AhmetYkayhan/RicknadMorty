@@ -1,5 +1,5 @@
-import Foundation
 import AuthFeatureInterface
+import Foundation
 
 // MARK: - Login Interactor Protocol
 
@@ -39,11 +39,11 @@ public final class LoginInteractor: LoginInteractorProtocol {
 
     public func handle(_ request: Login.Request) {
         switch request {
-        case .updateEmail(let value):
+        case let .updateEmail(value):
             email = value
             output?.present(.fieldUpdate(email: email, password: password))
 
-        case .updatePassword(let value):
+        case let .updatePassword(value):
             password = value
             output?.present(.fieldUpdate(email: email, password: password))
 

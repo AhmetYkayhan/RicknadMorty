@@ -10,7 +10,8 @@ public final class SettingsInteractor {
     private var type: SearchType = .character
 
     public init(presenter: SettingsPresenter,
-                delegate: SettingsFeatureDelegate?) {
+                delegate: SettingsFeatureDelegate?)
+    {
         self.presenter = presenter
         self.delegate = delegate
     }

@@ -1,7 +1,7 @@
-import SwiftUI
 import AppLogger
 import AppStorage
 import AuthFeatureInterface
+import SwiftUI
 
 // MARK: - Auth Feature Assembly
 
@@ -15,30 +15,36 @@ public final class AuthFeatureAssembly: AuthFeatureInterface, LoginRouterDelegat
 
     public init(logger: LoggerProtocol,
                 tokenStorage: TokenStorageProtocol,
-                delegate: AuthFeatureDelegate?) {
+                delegate: AuthFeatureDelegate?)
+    {
         self.logger = logger
         self.tokenStorage = tokenStorage
         self.delegate = delegate
     }
 
-    // MARK: - AuthFeatureInterface
+    // MARK: - Concrete Scene Factory
 
     @MainActor
-    public func makeLoginView() -> AnyView {
+    public func makeLoginScene() -> LoginView {
         let repository = makeRepository()
         let useCase: LoginUseCaseProtocol = LoginUseCase(
             repository: repository,
             tokenStorage: tokenStorage
         )
 
-        // Build VIP-S chain
         let presenter = LoginPresenter()
         let interactor = LoginInteractor(loginUseCase: useCase)
         interactor.output = presenter
         interactor.router = self
 
-        let view = LoginView(interactor: interactor, presenter: presenter)
-        return AnyView(view)
+        return LoginView(interactor: interactor, presenter: presenter)
+    }
+
+    // MARK: - AuthFeatureInterface
+
+    @MainActor
+    public func makeLoginView() -> AnyView {
+        AnyView(makeLoginScene())
     }
 
     public var isAuthenticated: Bool {
