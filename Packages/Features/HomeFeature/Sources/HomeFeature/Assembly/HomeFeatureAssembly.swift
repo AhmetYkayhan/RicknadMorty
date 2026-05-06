@@ -9,18 +9,39 @@ import SwiftUI
 public final class HomeFeatureAssembly: HomeFeatureInterface {
     private let networkClient: NetworkClientProtocol
     private let logger: LoggerProtocol
-    private let favoritesStore: FavoritesStore
+    private let favoritesStore: any FavoritesStoring
     private weak var delegate: HomeFeatureDelegate?
 
     public init(networkClient: NetworkClientProtocol,
                 logger: LoggerProtocol,
-                favoritesStore: FavoritesStore,
+                favoritesStore: any FavoritesStoring,
                 delegate: HomeFeatureDelegate?)
     {
         self.networkClient = networkClient
         self.logger = logger
         self.favoritesStore = favoritesStore
         self.delegate = delegate
+    }
+
+    // MARK: - Public CharacterDetail factory builder
+
+    /// Produces a `CharacterDetailFactory` closure bound to the given
+    /// favorites store. The App shell calls this once and injects the
+    /// resulting closure into every feature that needs CharacterDetail
+    /// navigation (Home, Profile, Settings).
+    @MainActor
+    public static func makeCharacterDetailFactory(
+        favoritesStore: any FavoritesStoring
+    ) -> CharacterDetailFactory {
+        { character in
+            let presenter = CharacterDetailPresenter()
+            let interactor = CharacterDetailInteractor(
+                character: character,
+                favoritesStore: favoritesStore,
+                presenter: presenter
+            )
+            return AnyView(CharacterDetailView(interactor: interactor, presenter: presenter))
+        }
     }
 
     // MARK: - Concrete Scene Factory
@@ -38,8 +59,6 @@ public final class HomeFeatureAssembly: HomeFeatureInterface {
             delegate: delegate
         )
 
-        CharacterDetailSceneFactory.shared = CharacterDetailSceneFactory(favoritesStore: favoritesStore)
-
         return HomeListView(interactor: interactor, presenter: presenter)
     }
 
@@ -47,37 +66,10 @@ public final class HomeFeatureAssembly: HomeFeatureInterface {
 
     @MainActor
     public func makeHomeView() -> AnyView {
-        AnyView(makeHomeScene())
-    }
-}
-
-// MARK: - Character Detail Scene Factory
-
-@MainActor
-public final class CharacterDetailSceneFactory {
-    public static var shared: CharacterDetailSceneFactory?
-
-    private let favoritesStore: FavoritesStore
-
-    public init(favoritesStore: FavoritesStore) {
-        self.favoritesStore = favoritesStore
-    }
-
-    public static func makeScene(character: HomeEntity) -> CharacterDetailView? {
-        guard let factory = shared else { return nil }
-        let presenter = CharacterDetailPresenter()
-        let interactor = CharacterDetailInteractor(
-            character: character,
-            favoritesStore: factory.favoritesStore,
-            presenter: presenter
+        let detailFactory = Self.makeCharacterDetailFactory(favoritesStore: favoritesStore)
+        return AnyView(
+            makeHomeScene()
+                .environment(\.characterDetailFactory, detailFactory)
         )
-        return CharacterDetailView(interactor: interactor, presenter: presenter)
-    }
-
-    public static func make(character: HomeEntity) -> AnyView {
-        if let scene = makeScene(character: character) {
-            return AnyView(scene)
-        }
-        return AnyView(Text("CharacterDetail not configured"))
     }
 }

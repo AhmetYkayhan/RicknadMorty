@@ -5,15 +5,15 @@ import Testing
 @MainActor
 @Suite("FavoriteCharactersInteractor")
 struct FavoriteCharactersInteractorTests {
-    @Test("onAppear loads from FavoritesStore")
+    @Test("onAppear loads from FavoritesStoring")
     func onAppear() {
-        let store = FavoritesStore()
         let entity = HomeEntity(
             id: 999, name: "Test", status: .alive, species: "Test",
             gender: "Test", origin: "Test", location: "Test", imageURL: nil
         )
-        store.toggle(entity)
-        defer { store.toggle(entity) } // cleanup
+        // No UserDefaults side effect — InMemoryFavoritesStore keeps the
+        // suite hermetic.
+        let store = InMemoryFavoritesStore(initialFavorites: [entity])
 
         let presenter = FavoriteCharactersPresenter()
         let sut = FavoriteCharactersInteractor(favoritesStore: store, presenter: presenter)

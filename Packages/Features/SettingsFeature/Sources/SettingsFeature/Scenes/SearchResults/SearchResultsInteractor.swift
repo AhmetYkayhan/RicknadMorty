@@ -43,19 +43,8 @@ public final class SearchResultsInteractor {
                 self.presenter.present(.failed(error: error))
             } catch {
                 if Task.isCancelled { return }
-                presenter.present(.failed(error: WrappedError(underlying: error)))
+                presenter.present(.failed(error: GenericAppError(error)))
             }
         }
-    }
-}
-
-private struct WrappedError: AppErrorProtocol {
-    let underlying: Error
-    var code: Int {
-        -1
-    }
-
-    var userMessage: String {
-        underlying.localizedDescription
     }
 }

@@ -66,19 +66,8 @@ public final class HomeListInteractor {
             } catch let error as any AppErrorProtocol {
                 presenter.present(.failed(error: error))
             } catch {
-                presenter.present(.failed(error: WrappedError(underlying: error)))
+                presenter.present(.failed(error: GenericAppError(error)))
             }
         }
-    }
-}
-
-private struct WrappedError: AppErrorProtocol {
-    let underlying: Error
-    var code: Int {
-        -1
-    }
-
-    var userMessage: String {
-        underlying.localizedDescription
     }
 }

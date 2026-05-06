@@ -3,10 +3,10 @@ import HomeFeature
 
 @MainActor
 public final class FavoriteCharactersInteractor {
-    private let favoritesStore: FavoritesStore
+    private let favoritesStore: any FavoritesStoring
     private let presenter: FavoriteCharactersPresenter
 
-    public init(favoritesStore: FavoritesStore,
+    public init(favoritesStore: any FavoritesStoring,
                 presenter: FavoriteCharactersPresenter)
     {
         self.favoritesStore = favoritesStore

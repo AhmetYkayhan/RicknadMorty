@@ -6,6 +6,8 @@ public struct SearchResultsView: View {
     let interactor: SearchResultsInteractor
     @Bindable var presenter: SearchResultsPresenter
 
+    @Environment(\.characterDetailFactory) private var characterDetailFactory
+
     public init(interactor: SearchResultsInteractor, presenter: SearchResultsPresenter) {
         self.interactor = interactor
         self.presenter = presenter
@@ -63,7 +65,11 @@ public struct SearchResultsView: View {
     private func destinationView(for result: SearchResultEntity) -> some View {
         switch result {
         case let .character(entity):
-            CharacterDetailSceneFactory.make(character: entity)
+            if let characterDetailFactory {
+                characterDetailFactory(entity)
+            } else {
+                Text("CharacterDetail not configured")
+            }
         case let .episode(entity):
             EpisodeDetailView(episode: entity)
         case let .location(entity):

@@ -7,6 +7,7 @@ public struct ProfileView: View {
     @Bindable var presenter: ProfilePresenter
 
     @Environment(\.favoritesStore) private var favoritesStore
+    @Environment(\.favoriteCharactersFactory) private var favoriteCharactersFactory
 
     public init(interactor: ProfileInteractor, presenter: ProfilePresenter) {
         self.interactor = interactor
@@ -44,7 +45,11 @@ public struct ProfileView: View {
                     }
                 )
             ) {
-                FavoriteCharactersSceneFactory.make()
+                if let favoriteCharactersFactory {
+                    favoriteCharactersFactory()
+                } else {
+                    Text("FavoriteCharacters not configured")
+                }
             }
         }
         .onAppear { interactor.handle(.onAppear) }

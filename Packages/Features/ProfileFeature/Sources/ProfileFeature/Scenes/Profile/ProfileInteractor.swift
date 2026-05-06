@@ -3,10 +3,10 @@ import HomeFeature
 
 @MainActor
 public final class ProfileInteractor {
-    private let favoritesStore: FavoritesStore
+    private let favoritesStore: any FavoritesStoring
     private let presenter: ProfilePresenter
 
-    public init(favoritesStore: FavoritesStore,
+    public init(favoritesStore: any FavoritesStoring,
                 presenter: ProfilePresenter)
     {
         self.favoritesStore = favoritesStore

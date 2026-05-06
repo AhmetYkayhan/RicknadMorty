@@ -3,11 +3,11 @@ import Foundation
 @MainActor
 public final class CharacterDetailInteractor {
     private let character: HomeEntity
-    private let favoritesStore: FavoritesStore
+    private let favoritesStore: any FavoritesStoring
     private let presenter: CharacterDetailPresenter
 
     public init(character: HomeEntity,
-                favoritesStore: FavoritesStore,
+                favoritesStore: any FavoritesStoring,
                 presenter: CharacterDetailPresenter)
     {
         self.character = character

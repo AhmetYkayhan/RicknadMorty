@@ -7,6 +7,7 @@ public struct FavoriteCharactersView: View {
     @Bindable var presenter: FavoriteCharactersPresenter
 
     @Environment(\.favoritesStore) private var favoritesStore
+    @Environment(\.characterDetailFactory) private var characterDetailFactory
 
     public init(interactor: FavoriteCharactersInteractor, presenter: FavoriteCharactersPresenter) {
         self.interactor = interactor
@@ -30,7 +31,11 @@ public struct FavoriteCharactersView: View {
                 }
                 .listStyle(.plain)
                 .navigationDestination(for: HomeEntity.self) { character in
-                    CharacterDetailSceneFactory.make(character: character)
+                    if let characterDetailFactory {
+                        characterDetailFactory(character)
+                    } else {
+                        Text("CharacterDetail not configured")
+                    }
                 }
             }
         }

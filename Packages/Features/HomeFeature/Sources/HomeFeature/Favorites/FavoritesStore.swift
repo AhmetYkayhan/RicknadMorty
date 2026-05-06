@@ -9,6 +9,9 @@ private struct FavoritesStoreKey: EnvironmentKey {
 }
 
 public extension EnvironmentValues {
+    /// SwiftUI views consume the concrete `FavoritesStore` to participate
+    /// in observation tracking. Non-observing consumers (interactors, etc.)
+    /// should depend on `any FavoritesStoring` directly.
     var favoritesStore: FavoritesStore? {
         get { self[FavoritesStoreKey.self] }
         set { self[FavoritesStoreKey.self] = newValue }
@@ -19,13 +22,14 @@ public extension EnvironmentValues {
 
 @MainActor
 @Observable
-public final class FavoritesStore {
-    private static let key = "favorite_characters"
-
+public final class FavoritesStore: FavoritesStoring {
     public private(set) var favorites: [HomeEntity] = []
 
-    public init() {
-        load()
+    @ObservationIgnored private let persistence: FavoritesPersistence
+
+    public init(persistence: FavoritesPersistence = UserDefaultsFavoritesPersistence()) {
+        self.persistence = persistence
+        favorites = persistence.load()
     }
 
     public func isFavorite(_ id: Int) -> Bool {
@@ -38,22 +42,6 @@ public final class FavoritesStore {
         } else {
             favorites.append(character)
         }
-        save()
-    }
-
-    // MARK: - Persistence
-
-    private func load() {
-        guard let data = UserDefaults.standard.data(forKey: Self.key),
-              let decoded = try? JSONDecoder().decode([HomeEntity].self, from: data)
-        else {
-            return
-        }
-        favorites = decoded
-    }
-
-    private func save() {
-        guard let data = try? JSONEncoder().encode(favorites) else { return }
-        UserDefaults.standard.set(data, forKey: Self.key)
+        persistence.save(favorites)
     }
 }

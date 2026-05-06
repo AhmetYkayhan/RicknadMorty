@@ -27,6 +27,14 @@ final class AppDependencyContainer {
 
     lazy var favoritesStore: FavoritesStore = .init()
 
+    // MARK: - Cross-feature factories
+
+    /// Single CharacterDetail factory shared by every tab that needs to
+    /// navigate into the detail scene. Built once from the favorites store
+    /// and injected into each feature via SwiftUI Environment.
+    private lazy var characterDetailFactory: CharacterDetailFactory =
+        HomeFeatureAssembly.makeCharacterDetailFactory(favoritesStore: favoritesStore)
+
     // MARK: - Auth Feature
 
     func makeAuthFeature(delegate: AuthFeatureDelegate?) -> AuthFeatureInterface {
@@ -53,6 +61,7 @@ final class AppDependencyContainer {
     func makeProfileFeature(delegate: ProfileFeatureDelegate?) -> ProfileFeatureInterface {
         ProfileFeatureAssembly(
             favoritesStore: favoritesStore,
+            characterDetailFactory: characterDetailFactory,
             delegate: delegate
         )
     }
@@ -63,6 +72,7 @@ final class AppDependencyContainer {
         SettingsFeatureAssembly(
             networkClient: networkClient,
             logger: logger,
+            characterDetailFactory: characterDetailFactory,
             delegate: delegate
         )
     }

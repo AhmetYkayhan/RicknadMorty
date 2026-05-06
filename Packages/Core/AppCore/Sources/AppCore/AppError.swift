@@ -112,6 +112,30 @@ public enum StorageError: AppErrorProtocol {
     }
 }
 
+// MARK: - Generic App Error
+
+/// Adapts any non-`AppErrorProtocol` Swift `Error` into an `AppErrorProtocol`,
+/// so presenters can rely on a single error contract regardless of source.
+public struct GenericAppError: AppErrorProtocol {
+    public let underlying: Error
+
+    public init(_ underlying: Error) {
+        self.underlying = underlying
+    }
+
+    public var code: Int {
+        -1
+    }
+
+    public var userMessage: String {
+        underlying.localizedDescription
+    }
+
+    public var errorDescription: String? {
+        userMessage
+    }
+}
+
 // MARK: - Auth Errors
 
 public enum AuthError: AppErrorProtocol {

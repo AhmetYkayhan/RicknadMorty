@@ -5,6 +5,8 @@ public struct HomeListView: View {
     let interactor: HomeListInteractor
     @Bindable var presenter: HomeListPresenter
 
+    @Environment(\.characterDetailFactory) private var characterDetailFactory
+
     public init(interactor: HomeListInteractor, presenter: HomeListPresenter) {
         self.interactor = interactor
         self.presenter = presenter
@@ -52,7 +54,11 @@ public struct HomeListView: View {
         }
         .listStyle(.plain)
         .navigationDestination(for: HomeEntity.self) { character in
-            CharacterDetailSceneFactory.make(character: character)
+            if let characterDetailFactory {
+                characterDetailFactory(character)
+            } else {
+                Text("CharacterDetail not configured")
+            }
         }
     }
 }

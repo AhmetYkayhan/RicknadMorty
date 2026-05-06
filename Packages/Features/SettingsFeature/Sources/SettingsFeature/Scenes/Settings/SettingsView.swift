@@ -5,6 +5,8 @@ public struct SettingsView: View {
     let interactor: SettingsInteractor
     @Bindable var presenter: SettingsPresenter
 
+    @Environment(\.searchResultsFactory) private var searchResultsFactory
+
     public init(interactor: SettingsInteractor, presenter: SettingsPresenter) {
         self.interactor = interactor
         self.presenter = presenter
@@ -56,7 +58,11 @@ public struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationDestination(item: pendingSearchBinding) { params in
-                SearchResultsSceneFactory.make(params: params)
+                if let searchResultsFactory {
+                    searchResultsFactory(params)
+                } else {
+                    Text("SearchResults not configured")
+                }
             }
         }
     }
