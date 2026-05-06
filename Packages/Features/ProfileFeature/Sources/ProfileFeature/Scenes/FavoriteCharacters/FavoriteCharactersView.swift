@@ -2,16 +2,22 @@ import SwiftUI
 import DesignSystem
 import HomeFeature
 
-// MARK: - Favorite Characters View
-
 struct FavoriteCharactersView: View {
+    let interactor: FavoriteCharactersInteractor
+    @Bindable var presenter: FavoriteCharactersPresenter
+
     @Environment(\.favoritesStore) private var favoritesStore
 
     var body: some View {
         Group {
-            if let store = favoritesStore, !store.favorites.isEmpty {
+            if presenter.viewState.isEmpty {
+                ContentUnavailableView(
+                    "Henüz favori karakter yok.",
+                    systemImage: "heart"
+                )
+            } else {
                 List {
-                    ForEach(store.favorites) { character in
+                    ForEach(presenter.viewState.characters) { character in
                         NavigationLink(value: character) {
                             FavoriteCharacterRow(character: character)
                         }
@@ -21,19 +27,18 @@ struct FavoriteCharactersView: View {
                 .navigationDestination(for: HomeEntity.self) { character in
                     CharacterDetailSceneFactory.make(character: character)
                 }
-            } else {
-                ContentUnavailableView(
-                    "Henüz favori karakter yok.",
-                    systemImage: "heart"
-                )
             }
         }
         .navigationTitle("Favori Karakterlerim")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
+        .onAppear { interactor.handle(.onAppear) }
+        .onChange(of: favoritesStore?.favorites.count ?? 0) { _, _ in
+            interactor.handle(.refresh)
+        }
     }
 }
-
-// MARK: - Row
 
 private struct FavoriteCharacterRow: View {
     let character: HomeEntity
@@ -41,9 +46,7 @@ private struct FavoriteCharacterRow: View {
     var body: some View {
         HStack(spacing: AppSpacing.sm) {
             AsyncImage(url: character.imageURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                image.resizable().aspectRatio(contentMode: .fill)
             } placeholder: {
                 Color.gray.opacity(0.3)
             }
@@ -51,14 +54,9 @@ private struct FavoriteCharacterRow: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
 
             VStack(alignment: .leading, spacing: AppSpacing.xxs) {
-                Text(character.name)
-                    .font(AppTypography.headline)
-
+                Text(character.name).font(AppTypography.headline)
                 HStack(spacing: AppSpacing.xxs) {
-                    Circle()
-                        .fill(statusColor)
-                        .frame(width: 8, height: 8)
-
+                    Circle().fill(statusColor).frame(width: 8, height: 8)
                     Text("\(character.status.rawValue) - \(character.species)")
                         .font(AppTypography.caption)
                         .foregroundColor(AppColors.secondaryLabel)

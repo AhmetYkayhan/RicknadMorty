@@ -4,6 +4,8 @@ import FirebaseAuth
 import AuthFeatureInterface
 import HomeFeature
 import HomeFeatureInterface
+import ProfileFeature
+import ProfileFeatureInterface
 import SettingsFeatureInterface
 
 // MARK: - App Coordinator
@@ -18,6 +20,7 @@ final class AppCoordinator {
     private let container: AppDependencyContainer
     private var _authFeature: AuthFeatureInterface?
     private var _homeFeature: HomeFeatureInterface?
+    private var _profileFeature: ProfileFeatureInterface?
     private var _settingsFeature: SettingsFeatureInterface?
 
     @ObservationIgnored
@@ -33,6 +36,14 @@ final class AppCoordinator {
         if let existing = _homeFeature { return existing }
         let feature = container.makeHomeFeature(delegate: self)
         _homeFeature = feature
+        return feature
+    }
+
+    @ObservationIgnored
+    private var profileFeature: ProfileFeatureInterface {
+        if let existing = _profileFeature { return existing }
+        let feature = container.makeProfileFeature(delegate: self)
+        _profileFeature = feature
         return feature
     }
 
@@ -58,6 +69,7 @@ final class AppCoordinator {
         try? Auth.auth().signOut()
         _authFeature = nil
         _homeFeature = nil
+        _profileFeature = nil
         _settingsFeature = nil
         withAnimation {
             currentRoute = .login
@@ -76,6 +88,7 @@ final class AppCoordinator {
         case .home, .characterDetail, .settings, .profile:
             MainTabView(
                 homeView: homeFeature.makeHomeView(),
+                profileView: profileFeature.makeProfileView(),
                 settingsView: settingsFeature.makeSettingsView(),
                 favoritesStore: container.favoritesStore
             )
@@ -118,6 +131,17 @@ extension AppCoordinator: HomeFeatureDelegate {
             withAnimation {
                 currentRoute = .profile
             }
+        }
+    }
+}
+
+// MARK: - ProfileFeatureDelegate
+
+extension AppCoordinator: ProfileFeatureDelegate {
+    func profileFeature(didSelect route: ProfileRoute) {
+        switch route {
+        case .editProfile, .logout:
+            break
         }
     }
 }

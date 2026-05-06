@@ -7,6 +7,8 @@ import AuthFeatureInterface
 import AuthFeature
 import HomeFeature
 import HomeFeatureInterface
+import ProfileFeature
+import ProfileFeatureInterface
 import SettingsFeature
 import SettingsFeatureInterface
 
@@ -43,6 +45,15 @@ final class AppDependencyContainer {
         HomeFeatureAssembly(
             networkClient: networkClient,
             logger: logger,
+            favoritesStore: favoritesStore,
+            delegate: delegate
+        )
+    }
+
+    // MARK: - Profile Feature
+
+    func makeProfileFeature(delegate: ProfileFeatureDelegate?) -> ProfileFeatureInterface {
+        ProfileFeatureAssembly(
             favoritesStore: favoritesStore,
             delegate: delegate
         )

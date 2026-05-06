@@ -5,6 +5,7 @@ import HomeFeature
 
 struct MainTabView: View {
     let homeView: AnyView
+    let profileView: AnyView
     let settingsView: AnyView
     let favoritesStore: FavoritesStore
 
@@ -15,7 +16,7 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house")
                 }
 
-            ProfileView()
+            profileView
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
