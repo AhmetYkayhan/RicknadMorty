@@ -1,6 +1,5 @@
 import SwiftUI
 import Observation
-import FirebaseAuth
 import AuthFeatureInterface
 import HomeFeature
 import HomeFeatureInterface
@@ -66,13 +65,17 @@ final class AppCoordinator {
     // MARK: - Logout
 
     func logout() {
-        try? Auth.auth().signOut()
-        _authFeature = nil
-        _homeFeature = nil
-        _profileFeature = nil
-        _settingsFeature = nil
-        withAnimation {
-            currentRoute = .login
+        // Capture the lazy auth feature before we clear cached references.
+        let authFeature = self.authFeature
+        Task { @MainActor in
+            try? await authFeature.signOut()
+            _authFeature = nil
+            _homeFeature = nil
+            _profileFeature = nil
+            _settingsFeature = nil
+            withAnimation {
+                currentRoute = .login
+            }
         }
     }
 

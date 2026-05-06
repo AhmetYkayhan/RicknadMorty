@@ -1,5 +1,4 @@
 import Foundation
-import FirebaseAuth
 import AppLogger
 import AppStorage
 import AppNetwork
@@ -22,7 +21,7 @@ final class AppDependencyContainer {
     // MARK: - Core Dependencies
 
     private lazy var logger: LoggerProtocol = AppLogger(category: "app")
-    private lazy var tokenStorage: TokenStorageProtocol = KeychainTokenStorage()
+    private(set) lazy var tokenStorage: TokenStorageProtocol = KeychainTokenStorage()
     private lazy var networkClient: NetworkClientProtocol = NetworkClient(logger: logger)
 
     // MARK: - Shared Stores
@@ -71,7 +70,9 @@ final class AppDependencyContainer {
 
     // MARK: - Helpers
 
+    /// Token-backed authentication snapshot. Synchronous because callers (AppCoordinator init)
+    /// need it during app launch before any async work runs.
     var isAuthenticated: Bool {
-        Auth.auth().currentUser != nil
+        tokenStorage.hasToken
     }
 }

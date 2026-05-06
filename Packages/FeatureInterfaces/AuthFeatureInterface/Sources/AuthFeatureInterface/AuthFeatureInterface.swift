@@ -8,8 +8,11 @@ public protocol AuthFeatureInterface {
     /// Creates the login view to be composed by the coordinator
     @MainActor func makeLoginView() -> AnyView
 
-    /// Current authentication status
+    /// Current authentication status (token-backed)
     var isAuthenticated: Bool { get async }
+
+    /// Sign the user out: revoke remote session and clear local token.
+    func signOut() async throws
 }
 
 // MARK: - Auth Feature Route

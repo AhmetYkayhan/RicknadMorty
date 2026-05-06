@@ -25,12 +25,7 @@ public final class AuthFeatureAssembly: AuthFeatureInterface, LoginRouterDelegat
 
     @MainActor
     public func makeLoginView() -> AnyView {
-        // Build workers
-        let service: AuthServiceProtocol = FirebaseAuthService()
-        let repository: AuthRepositoryProtocol = AuthRepository(
-            service: service,
-            logger: logger
-        )
+        let repository = makeRepository()
         let useCase: LoginUseCaseProtocol = LoginUseCase(
             repository: repository,
             tokenStorage: tokenStorage
@@ -50,6 +45,19 @@ public final class AuthFeatureAssembly: AuthFeatureInterface, LoginRouterDelegat
         get async {
             tokenStorage.hasToken
         }
+    }
+
+    public func signOut() async throws {
+        // Repository fans out to FirebaseAuthService which holds the Firebase coupling.
+        try await makeRepository().logout()
+        try tokenStorage.deleteToken()
+    }
+
+    // MARK: - Internal factory
+
+    private func makeRepository() -> AuthRepositoryProtocol {
+        let service: AuthServiceProtocol = FirebaseAuthService()
+        return AuthRepository(service: service, logger: logger)
     }
 
     // MARK: - LoginRouterDelegate
